@@ -1,0 +1,179 @@
+/* CSS styling specificly for project analysis in project page */
+
+* {
+    box-sizing: border-box;
+}
+
+/* ---- Font styling ---- */
+.project-title{
+    font-size: 3.5rem;
+}
+
+.secondary-text{
+    font-size: 0.85rem;
+    line-height: 1.2rem;
+    margin-bottom: 0;
+}
+
+.description-title{
+    font-weight: normal;
+}
+.project-info h2{
+    font-weight: bold;
+}
+
+.analysis-subheading,.project-reflection h2{
+    max-width: 38rem;
+    font-size: 2rem;
+    text-transform: none;
+    font-weight: 500;
+}
+
+#project-analysis h2, .project-reflection h2{
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 6rem;
+}
+
+#project-analysis h3{
+    color: #A6BEFF;
+}
+
+.persona-info{
+    font-weight: bold;
+}
+
+/* ---- ProjectPage header styling ---- */
+#project-header{
+    padding-top: 3rem;
+}
+
+.description-title, .description-content{
+    margin-top: 4rem;
+}
+
+#project-description, #conclusion{
+    background-color: #F2F1F4;
+}
+
+/* ---- Project analysis styling ---- */
+.subheading-content, .analysis-content p{
+    max-width: 45.6rem;
+}
+
+.analysis-outer-margin{
+    margin-left: 12rem;
+    margin-right: 12rem;
+}   
+
+/* Spacing to separate analysis subheading and content*/
+.analysis-content,#project-analysis {
+    margin-bottom: 4rem;
+}
+
+.analysis-subsection{
+    margin-bottom: 3rem;
+}
+
+#conclusion{
+    padding-bottom: 1rem;
+}
+
+
+/* ---- Split image slider css ---- */
+/*
+Referenced from: https://github.com/stevereich/split-panel-layout
+Referenced from: https://webdesign.tutsplus.com/how-to-create-a-split-screen-slider-with-javascript--cms-28844t
+*/
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 50rem;  
+    aspect-ratio: 1920 / 1341;  /* Original image width to height is 1920 x 1341 */
+    overflow: hidden;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    margin-top: 3rem;
+}
+
+.slider-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    user-select: none; /* Prevents user from selecting the image (prevents blue selection highlight) */
+}
+
+.slider-image.top {
+    clip-path: inset(0 50% 0 0); /* Crops the top image so half of the image is visible */
+    z-index: 2;
+}
+
+/* Slider css for split image */
+.slider {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%; /* Initial start position for slider */
+    width: 0.25rem; /* Slider thickness */
+    background: black;
+    z-index: 3;
+    transform: translateX(-0.125rem);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+    border-radius: 1rem;
+}
+
+/* Slider handle */
+.handle {
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    z-index: 4;
+    width: 2rem;
+    height: 6rem;
+}
+
+/* Handle animation */
+.handle:hover .handle-rect,  .handle:focus .handle-rect,  .handle:active .handle-rect {
+    fill: #8C9EFF;
+}
+
+/* ---- Split image backup for if javascript is disabled ---- */
+/* Display the two image side by side*/
+.noscript-ideation-images {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 3rem;
+}
+
+.noscript-ideation-images img {
+    max-width: 30rem;
+    height: auto;
+}
+
+/* ---- Table of content ---- */
+#table-of-content{
+    font-size: 1rem;
+    position: fixed;
+    top:70%;
+    max-width: 10rem;
+    text-align: center;
+    margin-left: 1.4rem;
+    background-color: rgba(254,247,238,0.9);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile layout (condense content: remove table and update margins) */
+@media (max-width: 48rem) {
+    #table-of-content {
+        display: none;
+    }
+    .analysis-outer-margin{
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;    
+    }   
+}

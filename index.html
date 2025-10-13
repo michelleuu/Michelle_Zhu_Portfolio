@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Michelle's Portfolio</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/grids.css" rel="stylesheet">
+    <script src="js/scrollFade.js"></script>
+    <script src="js/menu.js"></script>
+    </head>
+
+    <body>
+        <header>
+            <div class="nav-bar-flex name-headline">
+                <h1>Michelle</h1>
+                <h2>Zhu</h2>
+            </div>
+        </header>
+
+        <nav class="scroll-fade">
+            <div class="nav-bar-flex nav-links">
+                <div>
+                    <!-- UX Designer title fades out on scroll -->
+                    <a href="index.html" id=position class="nav-role button-nav">UX Researcher & Designer,</a>
+                    <!-- Fades in on scroll with Javascript-->
+                    <a href="index.html" id=name class="nav-role button-nav">Michelle Zhu</a>
+                </div>
+
+                <div id="navigation-links" class="nav-link-flex">
+                    <a href="#projects" class="button-nav">Projects</a>
+                    <a href="#about" class="button-nav">About</a>
+                    <a href="assets/Resume.pdf" target="_blank" class="button-nav">Resume</a>
+                    <a href="#contact" class="button-nav">Contact</a>
+                </div>
+                <div id="hamburger" class="nav-link-flex">
+                    <a href="javascript:void(0);" onclick="openMenu()" id="menu-toggle" aria-expanded="false" aria-controls="dropdown-menu"><img id="menu-icon" src="assets/hamburger-icon.svg" alt="menu" width="800" height="800"></a>
+                    <a href="javascript:void(0);" onclick="closeMenu()"><img id="close-icon" class="hide" src="assets/close-icon.svg" alt="close" width="800" height="800"></a>
+                </div>
+            </div>
+        </nav>
+        <div id="dropdown-menu" class="menu-dropdown-content" aria-hidden="true">
+            <a href="#projects" onclick="closeMenu()" class="dropdown-link" tabindex="-1">Projects</a>
+            <a href="#about" onclick="closeMenu()" class="dropdown-link" tabindex="-1">About</a>
+            <a href="assets/Resume.pdf" target="_blank" onclick="closeMenu()" class="dropdown-link" tabindex="-1">Resume</a>
+            <a href="#contact" onclick="closeMenu()" class="dropdown-link" tabindex="-1">Contact</a>            
+        </div>
+        <div class="personal-statement-container section-spacing">
+            <div class="homepage-statement outer-margin">
+                <p>I design with purpose to create experiences that are meaningful, intuitive, and work beautifully.</p>
+                <a href="#contact" class="button-def">Lets Connect!</a>
+            </div>
+        </div>
+
+        <section id="about" class="section-spacing">
+            <div class="about-wrapper">
+                <div class="about-container outer-margin">
+                    <div>
+                        <p class="about-intro">Hello, I am</p>
+                        <div class="about-name">
+                            <h2>Michelle Zhu</h2>
+                            <p>UX Researcher & Designer</p>
+                        </div>
+                    </div>
+
+                    <div class ="about-content">
+                        <p class="about-education">
+                            A second-year student at Simon Fraser University with concentrations 
+                            in Human-Centered AI & Data Science, and Design & Development for Mobile & Web.
+                        </p>
+                        
+                        <p class="about-bio">
+                            I am passionate about interfaces that stand out and bring confidence to users. 
+                            What truly drives me is creating meaningful user experiences and being part of the process 
+                            that turns early design ideas into real, testable solutions.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="projects" class="section-spacing">
+
+            <h2 class="outer-margin">Projects</h2>
+
+            <div class="section-divider-line"></div>
+            <div class="outer-margin project-container">
+                <div class="image-wrapper">
+                    <img src="assets/plantSnapperMockup.png" width="616" height="831" alt="Hand holding phone with PlantSnapper app identifying a wildflower plant">
+                </div>
+                <div class="project-content">
+                    <div class="project-label">
+                        <h3>Plant Snapper</h3>
+                        <h4>2025</h4>
+                    </div>
+                    <p>Developed a hands-free mobile app prototype that uses augmented reality and voice interactions to help hikers, gardeners, and nature enthusiasts identify plants, receive safety tips, and gain plant insights in real time.</p>
+                    <ul class="skills-flex">
+                        <li class="project-skills">User Research</li>
+                        <li class="project-skills">Interaction Design</li>
+                        <li class="project-skills">Prototyping</li>
+                    </ul>
+                    <a href="projectPage.html" class="button-def">View Project</a>
+                </div>
+            </div>
+            <div class="section-divider-line"></div>
+        </section>
+   
+        <footer class="footer-container outer-margin">
+            <div>
+                <h2>Hand-coded with care using HTML, CSS, and Javascript.</h2>
+                <p>© 2025  Michelle Zhu</p>            
+            </div>
+
+            <section id="contact">
+                <div class="footer-grid-navigation">
+                    <div>
+                        <h2 class="footer-category">Contact</h2>
+                        <a class="footer-link" href="mailto:michellezed2018@gmail.com">Email</a>
+                    </div>
+                    <div>
+                        <h2 class="footer-category">Socials</h2>
+                        <a class="footer-link" href="https://www.linkedin.com/in/michelle-z-a64144259">LinkedIn</a>
+                    </div>
+                    <div>
+                        <h2 class="footer-category">Projects</h2>
+                        <a class="footer-link" href="projectPage.html">PlantSnapper</a>
+                    </div>
+                </div>
+            </section>
+
+        </footer>
+
+    </body>
+</html>

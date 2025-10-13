@@ -1,0 +1,442 @@
+
+/* ----- Text styling ----- */
+h1,h2,h3,h4,h5,caption{
+    font-family: "Montserrat",sans-serif;
+    margin:0;
+    width: auto;
+}
+
+h5, p, ul, ol, figcaption, table{
+    font-family: "inter", serif;
+}
+
+h1{
+    font-weight: bold;
+    font-size: 2rem;
+}
+
+h2{
+    font-size:1.2rem;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+h3{
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+h4,caption{
+    margin-top: 0.5rem;
+    margin-bottom: 0.2rem;
+    font-weight: 500;
+    font-size: 1.2rem;
+    text-transform: none;
+}
+
+h5{
+    font-weight: normal;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+}
+
+
+p{
+    line-height: 1.35rem;
+    font-size: 1rem;
+    width:auto;
+    margin-bottom: 1.5rem;
+    margin-top: 0.4rem;
+}
+
+ul{
+    margin: 0;
+    padding: 0;
+    margin-top: 0.4rem;
+    list-style: none;
+}
+
+li{
+    padding-bottom: 0.25rem;
+}
+
+ol{
+    margin-top: 0.4rem;
+    padding: 0;
+    margin-left: 1.2rem;
+}
+
+figure{
+    margin: 0;
+    padding: 0;
+}
+
+figcaption{
+    text-align: center;
+    font-size: 0.85rem;
+    font-weight: 250;
+    margin: 2rem;
+
+}
+
+/* ----- Website Structure ----- */
+.outer-margin{
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+/* Mobile layout */
+@media (max-width:48rem){
+    .outer-margin{
+        padding-right: 1.5rem;
+        padding-left: 1.5rem;
+    }
+}
+
+.section-spacing{
+    padding-bottom: 4rem;
+}
+
+header{
+    background-color: #F2F1F4;
+}
+
+body{
+    margin:0;
+}
+
+nav {
+    position: sticky;
+    top: 0;
+    padding: 0;
+    background-color: #F2F1F4;
+    z-index: 100;     
+}
+
+.section-divider-line{
+  border-bottom: 0.08rem solid black;
+  margin:0;
+  padding:0;
+}
+
+/* ----- Image, video content styling  ----- */
+img{
+    width: 100%;
+    height:auto;
+    display: block;
+}
+
+.video-loop{
+    max-width: 25rem;
+    width: 100%;
+    height:auto;
+}
+
+.screen-reader-description {
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+  margin: 1rem;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ----- Buttons, links, and labels styling ----- */
+.button-nav, .nav-rol, .dropdown-link{
+    display: inline-block;
+    font-weight: normal;
+    font-family: "Montserrat",sans-serif;
+    font-size:1rem;
+    text-align:center;
+    color: black;
+    text-decoration: none;
+}
+
+.dropdown-link{
+    font-size:1.2rem;
+    text-align: left;
+    padding:2rem;
+    padding-left:1rem;
+    width:100%;
+    border-top: solid 0.08rem black;
+    text-transform: uppercase;
+}
+
+.dropdown-link:last-child {
+    border-bottom: solid 0.08rem black;
+}
+
+.nav-links{
+    padding:1rem;
+}
+
+.button-nav:hover, .button-nav:active, .button-nav:focus{
+    color: #A6BEFF;
+}
+
+.dropdown-link:hover, .dropdown-link:active, .dropdown-link:focus{
+    background-color: #A6BEFF;
+    color: #F2F1F4;
+}
+
+.button-def{
+    display: inline-block;
+    font-weight: normal;
+    font-family: "Montserrat",sans-serif;
+    font-size:1rem;
+    text-align:center;
+    color: black;
+    background-color: none;
+    text-decoration: none;   
+    border: 0.08rem solid black;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    transition-duration: 0.5s;
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+
+}
+
+.button-def:hover, .button-def:active, .button-def:focus{
+    background-color: black;
+    color: white;
+    border: 0.08rem solid black;
+    box-shadow: inset 0 0 0 0.08rem white;
+}
+
+.nav-role.button-nav{
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* Label to display project skills*/
+.project-skills{
+    font-family: "Montserrat",sans-serif;
+    display: inline-block;
+    font-weight:normal;
+    padding: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    margin:0;
+    background-color: #F2F1F4;
+    color: grey;
+    border-radius: 10rem;
+}
+
+/* -----  Footer styling  ----- */
+footer{
+    position: relative;
+    padding-top:2rem;
+    padding-bottom: 4rem;
+    background-color: #FEF7EE;
+    color: #A6BEFF;
+    z-index: 3;
+}
+
+footer h2{
+    font-weight:600;
+    text-transform: none;
+    padding: 0.5rem;
+    max-width: 25rem;
+
+}
+
+.footer-link {
+    font-size: 0.85rem;
+    font-family: "inter",serif;
+    display: block;
+    padding: 0.5rem;
+    color: #A6BEFF;
+    transition-duration: 0.5s;
+    border-bottom: 0.08rem solid #BFD0FF;
+    text-decoration: none;
+}
+
+.footer-category{
+    border-bottom: 0.08rem solid #BFD0FF;
+}
+
+.footer-link:hover,.footer-link:active,.footer-link:focus {
+    background-color: #A6BEFF;
+    color: #FEF7EE;
+    box-shadow: inset 0 0 0 0.08rem #FEF7EE;
+
+}
+
+/* ----- Index page headline styling ----- */
+.name-headline h1, .name-headline h2{
+ font-size: 11vw; /* For responsive text scaling */
+ font-weight: normal;
+ text-transform: capitalize;
+ z-index: 100;
+background-color: #F2F1F4;
+}
+
+.homepage-statement{
+    padding-top: 12rem;
+}
+
+.homepage-statement{
+    max-width: 24rem;
+}
+
+.personal-statement-container{
+      background-color: #F2F1F4;
+  
+}
+
+/* ----- Index page styling ----- */
+.project-label h4{
+    font-size: 3rem;
+    color: #A6BEFF;
+}
+
+.project-label h3{
+    font-size: 2rem;
+    font-weight: normal;
+}
+.project-content p, .project-label h3{
+    max-width: 29rem;
+}
+
+.project-content{
+    margin-top: 5rem;
+    padding-left: 3rem;
+}
+
+/* ----- About section styling ----- */
+.about-intro{
+    font-weight: bold;
+    font-style: italic;
+    color:#A6BEFF;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.about-name h2{
+    font-weight: bold;
+    font-size: 2rem;
+    text-transform: none;
+}
+
+.about-name, .about-content p{
+    padding-left: 3rem;
+    max-width: 32rem;
+}
+
+.image-wrapper img{
+    max-width: 30rem;
+}
+
+/* ---- CSS for scrollFade.js ---- */
+/* Fade role and name on scroll in main.html*/
+#position {
+    display: none;
+}
+
+#name {
+    display: block;
+    opacity: 1;
+}
+
+body.js-enabled #position {
+    display: block;
+    opacity: 1;
+}
+  
+body.js-enabled #name {
+    display: none;
+}
+
+/* ---- Table styling ---- */
+caption{
+    text-align: left;
+    padding-bottom: 1rem;
+}
+
+table {
+    font-size: 0.85rem;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 0.5rem;
+    text-align: left;
+}
+
+td{
+    margin-left: 0;
+    padding-left: 0;    
+    border-top: 0.08rem solid black;
+}
+
+
+th {
+    margin-left: 0;
+    padding-left: 0;
+    color: #A6BEFF;
+    font-size: 1.2rem;
+}
+
+#category-issue td:first-child,
+#category-issue th:first-child {
+    padding-right: 1.5rem;
+}
+
+#category-issue td:last-child,
+#category-issue th:last-child {
+    padding-left: 1.5rem;
+}
+
+/* To hide text but keep cell space inside table */
+.hide-category {
+    color: transparent;
+}
+
+/* ---- CSS hamburger menu and content for menu dropdown ---- */
+#menu-icon, #close-icon{
+    max-width: 1.5rem;
+}
+
+#hamburger{
+    display: none; /* Initially, menu is hidden */
+}
+
+/* Show menu for mobile layout and only if javascript is enabled*/
+@media (max-width: 45rem) {
+    .js-enabled #hamburger {
+        display: block;
+    }
+
+    .js-enabled #navigation-links {
+        display: none;
+    }
+}
+
+/* Menu dropdown styling */
+.menu-dropdown-content {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(100%); 
+    transition: transform 0.5s ease-in-out;
+    background-color: #F2F1F4;
+    padding-top: 10rem;
+}
+
+/* Move dropdown to screen when active */
+.menu-dropdown-content.active {
+    transform: translateY(0); 
+}
+
+.hide{
+    display:none;
+}
