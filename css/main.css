@@ -238,6 +238,10 @@ footer{
     z-index: 3;
 }
 
+#footer-note{
+    padding: 0;
+}
+
 footer h2{
     font-weight:600;
     text-transform: none;
