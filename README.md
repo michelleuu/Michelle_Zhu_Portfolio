@@ -1,11 +1,10 @@
-# mza157_project3
-UX design Portfolio for IAT 339 summer 2025 using HTML, CSS, and Javascript
+# Michelle Zhu — UX & Visual Designer
 
 ## Live URL to website: 
-https://pages.github.sfu.ca/iat339/mza157_project3/
+https://michelleuu.github.io/Michelle_Zhu_Portfolio/
 
 ## URL to github repository: 
-https://github.sfu.ca/iat339/mza157_project3
+https://github.com/michelleuu/Michelle_Zhu_Portfolio
 
 ## Citations
 Split image slider referenced:
