@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Michelle's Portfolio</title>
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet">
+    <link href="css/project.css" rel="stylesheet">
+    <link href="css/grids.css" rel="stylesheet">
+    <script src="js/splitSlider.js"></script>
+    <script src="js/menu.js"></script>
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav-bar-flex nav-links">
+                <a href="index.html" class="nav-role button-nav">Michelle Zhu</a>
+                <div id="navigation-links" class="nav-link-flex">
+                    <a href="index.html#about" class="button-nav">About</a>
+                    <a href="assets/Resume.pdf" target="_blank" class="button-nav">Resume</a>
+                    <a href="index.html#contact" class="button-nav">Contact</a>
+                </div>
+                <div id="hamburger" class="nav-link-flex">
+                    <a href="javascript:void(0);" onclick="openMenu()" id="menu-toggle" aria-expanded="false" aria-controls="dropdown-menu"><img id="menu-icon" src="assets/hamburger-icon.svg" alt="menu" width="800" height="800"></a>
+                    <a href="javascript:void(0);" onclick="closeMenu()"><img id="close-icon" class="hide" src="assets/close-icon.svg" alt="close" width="800" height="800"></a>
+                </div>
+            </div>
+        </nav>
+        <div id="dropdown-menu" class="menu-dropdown-content" aria-hidden="true">
+            <a href="index.html#about" onclick="closeMenu()" class="dropdown-link" tabindex="-1">About</a>
+            <a href="assets/Resume.pdf" target="_blank" onclick="closeMenu()" class="dropdown-link" tabindex="-1">Resume</a>
+            <a href="index.html#contact" onclick="closeMenu()" class="dropdown-link" tabindex="-1">Contact</a>            
+        </div>
+        <header>     
+            <section id="project-header" class="outer-margin section-spacing">
+                <div class="grid six-column">
+                    <h1 class="project-title">Jazzdor Music Festival Graphical Experimentation</h1>
+
+                    <div class="project-info">
+                        <h2>Roles</h2>
+                        <ul>
+                            <li>Lead Graphic Designer</li>
+                            <li>Concept Designer</li>
+                            <li>Copywriter</li>
+                        </ul>            
+                    </div>  
+                    <div class="project-info">
+                        <h2>Duration</h2>
+                        <ul><li>2024 - 4 Weeks</li></ul>
+                    </div>
+                    <div class="project-info">
+                        <h2>Team</h2>
+                        <ul>
+                            <li>Hannah Wang</li>
+                            <li>Michelle Zhu</li>
+                            <li>Muskan Kalra</li>
+                            <li>Nicky Wen</li>
+                        </ul>
+                    </div>
+                </div>   
+            </section>  
+        </header>
+
+        <section id="project-description" class="outer-margin">
+            <div class="grid overview-container">
+                <h2 class="description-title">Project Overview</h2>
+                <p class="description-content">
+                    We developed PlantSnapper, a mobile application designed to empower outdoor 
+                    enthusiasts, gardeners, and foragers with real-time plant identification, plant analysis, and safety tools. 
+                    Utilizing augmented reality and voice-based features, PlantSnapper allows hands-free identification of plants, 
+                    fungi, and flowers empowering users to explore nature without disrupting their outdoor experience. 
+                </p>
+
+                <div class="description-divider section-divider-line"></div>
+
+                <h2 class="description-title">User Research</h2>
+                <p class="description-content"> 
+                    This project is backed by user-centered research, combining secondary user research and user testing. From studying hikers, 
+                    foragers, gardeners, and casual nature explorers, we identified common challenges that shaped our personas and guided 
+                    every design decision.
+                </p>
+                <img class="description-visual" src="assets/jazzdorPoster.png" width="2665" height="4096" alt="Pink graphical poster for Jazzdor Music Festival">
+            </div>
+
+        </section>
+
+        <section id="table-of-content">
+            <div>
+                <a href="#background-research" class="footer-link">Background Research</a>
+                <a href="#research-findings" class="footer-link">Case Study</a>
+                <a href="#case-study" class="footer-link">Ideation & Mockups</a>
+                <a href="#user-testing" class="footer-link">User Testing</a>
+                <a href="#design-opportunity" class="footer-link">Design Opportunity</a>
+                <a href="#conclusion" class="footer-link">Project Reflection</a>
+            </div>
+        </section>
+
+        <section id="project-analysis" class="analysis-outer-margin">
+
+            <div id="background-research">
+                <div class="grid-analysis">
+                    <div class="analysis-subsection">
+                        <h2 class="analysis-subheading">Background Research for Jazzdor</h2>
+                        <p class="subheading-content">
+                            Jazzdor Festival happens twice a year, promoting diverse forms of jazz. Showcasing diversity and creativity, 
+                            their mission is to support jazz trends. The festival provides a platform for established and emerging artists, 
+                            fostering an inclusive environment for jazz enthusiasts.
+                        </p>                 
+                    </div>
+                    <div class="analysis-content">
+                        <h3>Venue, Performances, and Featured Artists</h3>
+                            <p>
+                                Visual references of the venue, performances, and featured artists were collected to better understand the festival’s atmosphere 
+                                and audience. These images capture the festival’s energy, colour palette, and spatial environment, providing insights that informed 
+                                the tone and mood of the design direction.
+                            </p>
+                            <img src="assets/festivalImages.png" alt="" width="2377" height="1083">
+                    </div>
+                </div>
+            </div>
+
+            <div id="case-study">
+                <div class="grid-analysis">
+                    <div class="analysis-subsection">
+                        <h2 class="analysis-subheading">Dan Friedman Case Study</h2>
+                        <p class="subheading-content">
+                            Our team studied on the works of Dan Friedman and his design influence in to postmodern and radical design movements. 
+                            We examined how his approach challenged traditional design systems <strong>to create expressive but structured compositions</strong>, 
+                            balancing experimentation with visual clarity. 
+                        </p>
+                        <p class="subheading-content">
+                            <strong>Five key design qualities</strong> were identified to guide the design direction: 
+                        </p>
+                    </div>
+                    
+                    <div class="analysis-content">
+                        <div class="grid three-column">
+                            <div>
+                                <h3>Non-Linear Typography</h3>
+                                <p class="secondary-text">Unconventional treatment of text, to be stretched, scaled, and rotated, treating each letter as its own graphical element to increase readability</p>
+                            </div>
+                            <div>
+                                <h3>Text Over Image (Framing)</h3>
+                                <p class="secondary-text">Placing text over an image to separate, enhance, and contrast typography from the composition, emphasizing the message and achieving effective visual communication</p>
+                            </div>
+                            <div>
+                                <h3>Off-Set Grid Elements</h3>
+                                <p class="secondary-text">Offsetting and breaking grid boundaries, introducing disorderly elements into orderly system to increase readability and unpredictability</p>
+                            </div>
+                            <div>
+                                <h3>Hierarchical Contrast for Typography </h3>
+                                <p class="secondary-text">Applying combinations of elemental contrasts to establish visual hierarchy and unify the composition</p>
+                            </div>
+                            <div>
+                                <h3>Bold Colour Palettes</h3>
+                                <p class="secondary-text">Bold, high-contrast colors to enhance readability and stand out from more muted, traditional color schemes</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="analysis-content">
+                        <p>
+                           I translated these ideas into wireframes and mockups to explore layout, navigation, and user flow.
+                        </p>
+                        <!-- SVG animation referenced from IAT 339 Lectures and in-class tutorials -->
+                        <figure id="ideation-image-container">
+                            <div class="slider-container" role="region" aria-label="Wireframe and Mockup Comparison Slider">
+                                <img class="slider-image bottom" src="assets/mockup.png" alt="High-fidelity plantsnapper mockup showing navigation flow" width="1920" height="1342">
+                                <img class="slider-image top" src="assets/wireframe.png" alt="rough sketch of plantsnapper wireframe showing navigation flow" width="1920" height="1342" aria-hidden="true">
+                                <div class="slider" aria-hidden="true"></div>
+                            
+                                <svg 
+                                class="handle" width="37" height="96" viewBox="0 0 37 96" fill="none" xmlns="http://www.w3.org/2000/svg"
+                                aria-label="Slider handle: use left and right arrow keys to adjust comparison"
+                                tabindex="0"
+                                role="slider"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
+                                aria-valuenow="50"
+                                aria-valuetext="rightside 50% Wireframe, leftside 50% Mockup"
+                                >
+                                <rect class="handle-rect" x="9" y="8" width="16" height="80" fill="black"/>
+                                <rect x="14" y="12" width="13" height="71" stroke="#FEF7EE" stroke-width="2"/>
+                                <line x1="18" y1="47" x2="26" y2="47" stroke="#FEF7EE" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="18" y1="50" x2="26" y2="50" stroke="#FEF7EE" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="18" y1="53" x2="26" y2="53" stroke="#FEF7EE" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="18" y1="41" x2="26" y2="41" stroke="#FEF7EE" stroke-width="2" stroke-linecap="round"/>
+                                <line x1="18" y1="44" x2="26" y2="44" stroke="#FEF7EE" stroke-width="2" stroke-linecap="round"/>
+                                </svg>
+                            </div>
+                            <figcaption>[Drag to compare wireframe (left image) and mockup (right image).]</figcaption>
+                        </figure>
+
+                        <!-- Backup for if JavaScript is disabled -->
+                        <noscript>
+                            <div class="noscript-ideation-images">
+                                <div>
+                                    <img src="assets/wireframe.png" alt="rough sketch of plantsnapper wireframe showing navigation flow" width="960" height="671">
+                                    <p>Picture of Wireframe Work</p>
+                                </div>
+                                <div>
+                                    <img src="assets/mockup.png" alt="High-fidelity plantsnapper mockup showing navigation flow" width="960" height="671">
+                                    <p>Picture of Mockup Work</p>
+                                </div>
+                            </div>
+                        </noscript>
+                    </div>
+                </div>
+            </div>
+
+            <div id="user-testing">
+                <div class="grid-analysis">
+                    <div class="analysis-subsection">
+                        <h2 class="analysis-subheading">User testings and Interviews</h2>
+                        <p class="subheading-content">
+                            I conducted a three-part usability study, beginning with open exploration to observe users’ natural behavior, 
+                            followed by task completion to uncover specific pain points, and concluding with a short interview to 
+                            gather feedback and highlight usability issues.
+                        </p>
+                    </div>
+
+                    <div class="analysis-content">
+                        <h3>Given task</h3>
+                        <p>"Identify a plant from the photo album and save it to your personal journal"</p>
+                        <figure id="userflow-image-container">
+                            <img src="assets/userFlow.png" alt="Mobile UI from home screen to saved plants in profile page" width="1044" height="523">
+                            <figcaption>[Simplified Version of Expected User Flow]</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="analysis-content">
+                        <p id="table-desc" class="screen-reader-description">
+                            This table lists usability issues found during user testing, grouped by common categories. 
+                            This table helps identify recurring design issues to help prioritize fixes.
+                        </p>
+                        <table id="category-issue" aria-describedby="table-desc">
+                            <caption>Overview of common issues from user testing</caption>
+                            <thead>
+                                <tr>
+                                    <th>Category</th>
+                                    <th>Issue</th>
+                                </tr>
+                            </thead>
+                        
+                            <tbody>
+                                <tr>
+                                    <td>Navigation and Usability</td>
+                                    <td>Lack of guidance on voice-trigger features</td>
+                                </tr>
+                                <tr>
+                                    <td class="hide-category">Navigation and Usability</td>
+                                    <td>Users got lost in plant identification pages</td>
+                                </tr>
+                                <tr>
+                                    <td class="hide-category">Navigation and Usability</td>
+                                    <td>Users struggled to return to key pages</td>
+                                </tr>
+                                <tr>
+                                    <td>Photo and Journal Functionality</td>
+                                    <td>Captured images from live-capture were not accessible</td>
+                                </tr>
+                                <tr>
+                                    <td class="hide-category">Photo and Journal Functionality</td>
+                                    <td>Journal customization was limited</td>
+                                </tr>
+                                <tr>
+                                    <td>Button and Icon Improvements</td>
+                                    <td>Mic on the home screen felt unintuitive</td>
+                                </tr>
+                                <tr>
+                                    <td class="hide-category">Button and Icon Improvements</td>
+                                    <td>Buttons lacked affordances</td>
+                                </tr>
+                                <tr>
+                                    <td>Overall Experience</td>
+                                    <td>Limited interactivity in the explore feed section</td>
+                                </tr>
+                                <tr>
+                                    <td class="hide-category">Overall Experience</td>
+                                    <td>Accessibility issues with side-scrolling</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="analysis-content">
+                        <p>
+                            The category-issue table captures some of the recurring issues that was observed during a monitored user testing, especially 
+                            around their ability to navigate the app. Noticing where users hesitated or paused provided a fresh perspective 
+                            to understand design flaws and the importance of designing for real user behavior to support first-time users.
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="design-opportunity">
+                <div class="grid-analysis">
+                    <div class="analysis-subsection">
+                        <h2 class="analysis-subheading">Usability Insight and Design Opportunity</h2>
+                    </div>
+
+                    <div class="analysis-content">
+                        <h3>Insight</h3>
+                        <p>
+                            Despite the app's hands-free focus, users struggled to know when, how, or why to use its voice-based features 
+                            and often got lost during key tasks like plant identification and photo capture. The user feedback helped us 
+                            identify a crucial design challenge, asking how can we give better <strong>guidance to lead users toward a smoother, voice-driven experience?</strong>
+                        </p>
+                        <h3>Opportunity</h3>
+                        <p>
+                            One solution to this design challenge is to improve UI prompts with clear, contextual suggestions like “would you like to identify this plant?”, 
+                            along with feedback loops that guide users when no input is detected to help build confidence and clarify next steps. 
+                            This approach reduces user confusion and encourages more consistent use of PlantSnapper's voice features. 
+                            As a result, users feel supported throughout the process, leading to higher task completion rates.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </section>    
+
+        <section id="conclusion">
+            <div class="grid-analysis analysis-outer-margin">
+                <div class="analysis-subsection project-reflection">
+                    <h2 class="analysis-subheading">Reflection</h2> 
+                    <p class="subheading-content">
+                        Developing PlantSnapper taught me the importance of balancing innovative features that may be new to users with clear, intuitive guidance. 
+                        User testing showed that voice-based features remove familiar affordances like buttons and caused confusion. To address this, it was essential 
+                        to introduce alternatives such as contextual text prompts and feedback loops to guide users effectively. My understanding of successful design 
+                        has grown as a result of this experience, which goes beyond what a product can accomplish and shows me the value of prioritizing users’ perspectives 
+                        and iterating based on real feedback.
+                    </p> 
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer-container outer-margin">
+            <div>
+                <h2>Hand-coded with care using HTML, CSS, and Javascript.</h2>
+                <p>© 2025  Michelle Zhu</p>            
+            </div>
+
+            <section id="contact">
+                <div class="footer-grid-navigation">
+                    <div>
+                        <h2 class="footer-category">Contact</h2>
+                        <a class="footer-link" href="mailto:michellezed2018@gmail.com">Email</a>
+                    </div>
+                    <div>
+                        <h2 class="footer-category">Socials</h2>
+                        <a class="footer-link" href="https://www.linkedin.com/in/michelle-z-a64144259">LinkedIn</a>
+                    </div>
+                    <div>
+                        <h2 class="footer-category">Projects</h2>
+                        <a class="footer-link" href="projectPage.html">PlantSnapper</a>
+                    </div>
+                </div>
+            </section>
+
+        </footer>
+    </body>
+</html>
