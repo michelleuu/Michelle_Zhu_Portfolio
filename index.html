@@ -28,9 +28,9 @@
             <div class="nav-bar-flex nav-links">
                 <div>
                     <!-- UX Designer title fades out on scroll -->
-                    <a href="index.html" id=position class="nav-role button-nav">UX Designer & Researcher,</a>
+                    <a href="index.html" id="position" class="nav-role button-nav">UX Designer & Researcher,</a>
                     <!-- Fades in on scroll with Javascript-->
-                    <a href="index.html" id=name class="nav-role button-nav">Michelle Zhu</a>
+                    <a href="index.html" id="name home-icon" class="nav-role button-nav">Michelle Zhu</a>
                 </div>
 
                 <div id="navigation-links" class="nav-link-flex">
@@ -52,7 +52,7 @@
         <div class="personal-statement-container section-spacing">
             <div class="homepage-statement outer-margin">
                 <p>I design with purpose to create experiences that are meaningful, intuitive, and work beautifully.</p>
-                <a href="#contact" class="button-def">Lets Connect!</a>
+                <a href="#contact" class="button-def">Let's Connect!</a>
             </div>
         </div>
 
@@ -85,6 +85,7 @@
         </section>
 
         <section id="projects" class="section-spacing">
+            <h2 class="hide">Projects</h2>
             <div class="outer-margin project-container">
                 <div class="image-wrapper">
                     <img src="assets/plantSnapperMockup.png" width="616" height="831" alt="Hand holding phone with PlantSnapper app identifying a wildflower plant">
@@ -122,14 +123,39 @@
                 </div>
             </div>
         </section>
-   
+        
+        <section id="contact">
+            <div id="main-contact">
+                <h2>Let's <span class="underline">Connect!</span></h2>
+                <div id="email-container" class="outer-margin">
+                    <a id="email-contact" class="contact-link" href="mailto:michellezed2018@gmail.com">michellezed2018@gmail.com</a>
+                </div>
+            </div>
+            <div id="other-contact-container" class="grid two-column">
+                <div id="other-contact" class="outer-margin">
+                    <h3>Find Me Elsewhere</h3>
+                    <div class="link-with-icon">
+                        <img class="contact-icons" src="assets/icons/linkedn-icon.svg" alt="Links to external Linkedn profile" height="30" width="34">
+                        <a class="contact-link" href="https://www.linkedin.com/in/michelle-z-a64144259">linkedin.com/in/michelle-z-a64144259</a>
+                    </div>
+                    <div class="link-with-icon">
+                        <img class="contact-icons" src="assets/icons/github-icon.svg" alt="Links to external github profile" height="34" width="34">
+                        <a class="contact-link" href="https://github.com/michelleuu">https://github.com/michelleuu</a>
+                    </div>
+                </div>
+                <div>
+                    <img id="self-portrait" src="assets/abstract-portrait.png" alt="Abstract misty scene with overlapping blue filter." height="1130" width="1496">
+                </div>
+            </div>
+        </section>
+
         <footer class="footer-container outer-margin">
             <div>
                 <h2 id ="footer-note">Coded in HTML, CSS, and Javascript.</h2>
                 <p>© 2025  Michelle Zhu</p>            
             </div>
 
-            <section id="contact">
+            <section id="footer-navigation">
                 <div class="footer-grid-navigation">
                     <div>
                         <h2 class="footer-category">Contact</h2>
@@ -141,7 +167,8 @@
                     </div>
                     <div>
                         <h2 class="footer-category">Projects</h2>
-                        <a class="footer-link" href="projectPage1.html">PlantSnapper</a>
+                        <a class="footer-link" href="projectPage1.html">PlantSnapper Mobile App</a>
+                        <a class="footer-link" href="projectPage2.html">Jazzdor Music Festival</a>
                     </div>
                 </div>
             </section>

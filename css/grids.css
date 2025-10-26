@@ -24,7 +24,7 @@
 .project-container{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    margin-top: 3rem;
+    margin-top: 2rem;
 }
 
 @media(max-width:48rem){
@@ -68,6 +68,13 @@
     display: flex;
     justify-content: end;
     align-items: center;
+}
+/* ---- Index Page Contact Section ---- */
+.link-with-icon{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding-bottom: 1rem;
 }
 
 /* ----Footer layout ---- */
@@ -234,4 +241,12 @@
     .three-column{
         grid-template-columns: 1fr;
     }
+    .two-column{
+        grid-template-columns: 1fr;
+    }    
+    #self-portrait {
+        max-width: 100%;
+        justify-self: center;
+    }
 }
+

@@ -176,4 +176,7 @@ Referenced from: https://webdesign.tutsplus.com/how-to-create-a-split-screen-sli
         margin-left: 1.5rem;
         margin-right: 1.5rem;    
     }   
+    .project-title{
+        font-size: 10vw;
+    }
 }
