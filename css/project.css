@@ -35,8 +35,13 @@
     margin-top: 6rem;
 }
 
+.project-reflection h2{
+    text-align: center;
+    font-weight: bold;
+}
+
 #project-analysis h3{
-    color: #A6BEFF;
+    color: #8BAAFF;
 }
 
 .persona-info{

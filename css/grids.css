@@ -245,8 +245,16 @@
         grid-template-columns: 1fr;
     }    
     #self-portrait {
-        max-width: 100%;
-        justify-self: center;
+        display: none;
+    }
+    #other-contact h3{
+        margin-top: 4rem;
+    }
+    #email-contact{
+        margin-left: 0rem;
+    }
+    #contact h2{
+        margin-left:1rem;
     }
 }
 
