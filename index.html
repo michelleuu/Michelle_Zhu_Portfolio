@@ -1,179 +1,312 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Michelle's Portfolio</title>
 
     <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- CSS -->
-    <link href="css/main.css" rel="stylesheet">
-    <link href="css/grids.css" rel="stylesheet">
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/grids.css" rel="stylesheet" />
     <script src="js/scrollFade.js"></script>
     <script src="js/menu.js"></script>
-    </head>
+  </head>
 
-    <body>
-        <header>
-            <div class="nav-bar-flex name-headline">
-                <h1>Michelle</h1>
-                <h2>Zhu</h2>
-            </div>
-        </header>
+  <body>
+    <header>
+      <div class="nav-bar-flex name-headline">
+        <h1>Michelle</h1>
+        <h2>Zhu</h2>
+      </div>
+    </header>
 
-        <nav class="scroll-fade">
-            <div class="nav-bar-flex nav-links">
-                <div>
-                    <!-- UX Designer title fades out on scroll -->
-                    <a href="index.html" id="position" class="nav-role button-nav">UX Designer & Researcher,</a>
-                    <!-- Fades in on scroll with Javascript-->
-                    <a href="index.html" id="name" class="home-icon nav-role button-nav">Michelle Zhu</a>
-                </div>
-
-                <div id="navigation-links" class="nav-link-flex">
-                    <a href="#about" class="button-nav">About</a>
-                    <a href="assets/Resume.pdf" target="_blank" class="button-nav">Resume</a>
-                    <a href="#contact" class="button-nav">Contact</a>
-                </div>
-                <div id="hamburger" class="nav-link-flex">
-                    <a href="javascript:void(0);" onclick="openMenu()" id="menu-toggle" aria-expanded="false" aria-controls="dropdown-menu"><img id="menu-icon" src="assets/hamburger-icon.svg" alt="menu" width="800" height="800"></a>
-                    <a href="javascript:void(0);" onclick="closeMenu()"><img id="close-icon" class="hide" src="assets/close-icon.svg" alt="close" width="800" height="800"></a>
-                </div>
-            </div>
-        </nav>
-        <div id="dropdown-menu" class="menu-dropdown-content" aria-hidden="true">
-            <a href="#about" onclick="closeMenu()" class="dropdown-link" tabindex="-1">About</a>
-            <a href="assets/Resume.pdf" target="_blank" onclick="closeMenu()" class="dropdown-link" tabindex="-1">Resume</a>
-            <a href="#contact" onclick="closeMenu()" class="dropdown-link" tabindex="-1">Contact</a>            
-        </div>
-        <div class="personal-statement-container section-spacing">
-            <div class="homepage-statement outer-margin">
-                <p>I design with purpose to create experiences that are meaningful, intuitive, and work beautifully.</p>
-                <a href="#contact" class="button-def">Let's Connect!</a>
-            </div>
+    <nav class="scroll-fade">
+      <div class="nav-bar-flex nav-links">
+        <div>
+          <!-- UX Designer title fades out on scroll -->
+          <a href="index.html" id="position" class="nav-role button-nav"
+            >UX Designer & Researcher,</a
+          >
+          <!-- Fades in on scroll with Javascript-->
+          <a href="index.html" id="name" class="home-icon nav-role button-nav"
+            >Michelle Zhu</a
+          >
         </div>
 
-        <section id="about" class="section-spacing">
-            <div class="about-wrapper">
-                <div class="about-container outer-margin">
-                    <div>
-                        <p class="about-intro">Hello, I am</p>
-                        <div class="about-name">
-                            <h2>Michelle Zhu</h2>
-                            <p>UX Researcher & Designer</p>
-                        </div>
-                    </div>
+        <div id="navigation-links" class="nav-link-flex">
+          <a href="#about" class="button-nav">About</a>
+          <a href="assets/Resume.pdf" target="_blank" class="button-nav"
+            >Resume</a
+          >
+          <a href="#contact" class="button-nav">Contact</a>
+        </div>
+        <div id="hamburger" class="nav-link-flex">
+          <a
+            href="javascript:void(0);"
+            onclick="openMenu()"
+            id="menu-toggle"
+            aria-expanded="false"
+            aria-controls="dropdown-menu"
+            ><img
+              id="menu-icon"
+              src="assets/hamburger-icon.svg"
+              alt="menu"
+              width="800"
+              height="800"
+          /></a>
+          <a href="javascript:void(0);" onclick="closeMenu()"
+            ><img
+              id="close-icon"
+              class="hide"
+              src="assets/close-icon.svg"
+              alt="close"
+              width="800"
+              height="800"
+          /></a>
+        </div>
+      </div>
+    </nav>
+    <div id="dropdown-menu" class="menu-dropdown-content" aria-hidden="true">
+      <a href="#about" onclick="closeMenu()" class="dropdown-link" tabindex="-1"
+        >About</a
+      >
+      <a
+        href="assets/Resume.pdf"
+        target="_blank"
+        onclick="closeMenu()"
+        class="dropdown-link"
+        tabindex="-1"
+        >Resume</a
+      >
+      <a
+        href="#contact"
+        onclick="closeMenu()"
+        class="dropdown-link"
+        tabindex="-1"
+        >Contact</a
+      >
+    </div>
+    <div class="personal-statement-container section-spacing">
+      <div class="homepage-statement outer-margin">
+        <p>
+          I design with purpose to create experiences that are meaningful,
+          intuitive, and work beautifully.
+        </p>
+        <a href="#contact" class="button-def">Let's Connect!</a>
+      </div>
+    </div>
 
-                    <div class ="about-content">
-                        <p class="about-education">
-                            A second-year student at Simon Fraser University with concentrations 
-                            in Human-Centered AI & Data Science, Designing Interactions, and Design & Development for Mobile & Web.
-                        </p>
-                        
-                        <p class="about-bio">
-                            I am passionate about interfaces that stand out and bring confidence to users. 
-                            What truly drives me is creating meaningful user experiences and being part of the process 
-                            that turns early design ideas into real, testable solutions.
-                        </p>
-                    </div>
-                </div>
+    <section id="about" class="section-spacing">
+      <div class="about-wrapper">
+        <div class="about-container outer-margin">
+          <div>
+            <p class="about-intro">Hello, I am</p>
+            <div class="about-name">
+              <h2>Michelle Zhu</h2>
+              <p>UX Researcher & Designer</p>
             </div>
+          </div>
 
-        </section>
+          <div class="about-content">
+            <p class="about-education">
+              A second-year student at Simon Fraser University with
+              concentrations in Human-Centered AI & Data Science, Designing
+              Interactions, and Design & Development for Mobile & Web.
+            </p>
 
-        <section id="projects" class="section-spacing">
-            <h2 class="hide">Projects</h2>
-            <div class="outer-margin project-container">
-                <div class="image-wrapper">
-                    <img src="assets/plantSnapperMockup.png" width="616" height="831" alt="Hand holding phone with PlantSnapper app identifying a wildflower plant">
-                </div>
-                <div class="project-content">
-                    <div class="project-label">
-                        <h3>Plant Snapper</h3>
-                        <h4>2025</h4>
-                    </div>
-                    <p>A hands-free mobile app prototype that uses augmented reality and voice interactions to help hikers, gardeners, and nature enthusiasts identify plants, receive safety tips, and gain plant insights in real time.</p>
-                    <ul class="skills-flex">
-                        <li class="project-skills">User Research</li>
-                        <li class="project-skills">Interaction Design</li>
-                        <li class="project-skills">Prototyping</li>
-                    </ul>
-                    <a href="projectPage1.html" class="button-def">View Project</a>
-                </div>
-            </div>
-            <div class="outer-margin project-container">
-                <div class="image-wrapper">
-                    <img src="assets/jazzdorThumbnail.png" width="2921" height="1705" alt="Cyclist passing through Jazzdor Music Festival public installation">
-                </div>
-                <div class="project-content">
-                    <div class="project-label">
-                        <h3>Jazzdor Music Festival Graphical Experimentation</h3>
-                        <h4>2024</h4>
-                    </div>
-                    <p>Experimental visual design concepts for Jazzdor Music Festival, aiming to capture the improvisational nature of jazz and their audience.</p>
-                    <ul class="skills-flex">
-                        <li class="project-skills">Graphic Design</li>
-                        <li class="project-skills">Identity</li>
-                        <li class="project-skills">Case Studies</li>
-                    </ul>
-                    <a href="projectPage2.html" class="button-def">View Project</a>
-                </div>
-            </div>
-        </section>
-        
-        <section id="contact" class="section-spacing">
-            <div id="main-contact">
-                <h2>Let's <span class="underline">Connect!</span></h2>
-                <div id="email-container" class="outer-margin">
-                    <a id="email-contact" class="contact-link" href="mailto:michellezed2018@gmail.com">michellezed2018@gmail.com</a>
-                </div>
-            </div>
-            <div id="other-contact-container" class="grid two-column">
-                <div id="other-contact" class="outer-margin">
-                    <h3>My Online Presence</h3>
-                    <div class="link-with-icon">
-                        <img class="contact-icons" src="assets/icons/linkedn-icon.svg" alt="Links to external Linkedn profile" height="30" width="34">
-                        <a class="contact-link" href="https://www.linkedin.com/in/michelle-z-a64144259">linkedin.com/in/michelle-z-a64144259</a>
-                    </div>
-                    <div class="link-with-icon">
-                        <img class="contact-icons" src="assets/icons/github-icon.svg" alt="Links to external github profile" height="34" width="34">
-                        <a class="contact-link" href="https://github.com/michelleuu">https://github.com/michelleuu</a>
-                    </div>
-                </div>
-                <div>
-                    <img id="self-portrait" src="assets/abstract-portrait.png" alt="Abstract misty scene with overlapping blue filter." height="1130" width="1496">
-                </div>
-            </div>
-        </section>
+            <p class="about-bio">
+              I am passionate about interfaces that stand out and bring
+              confidence to users. What truly drives me is creating meaningful
+              user experiences and being part of the process that turns early
+              design ideas into real, testable solutions.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <footer class="footer-container outer-margin">
-            <div>
-                <h2 id ="footer-note">Coded in HTML, CSS, and Javascript.</h2>
-                <p>© 2025  Michelle Zhu</p>            
-            </div>
+    <section id="projects" class="section-spacing">
+      <h2 class="hide">Projects</h2>
+      <div class="outer-margin project-container">
+        <div class="image-wrapper">
+          <img
+            src="assets/plantSnapperMockup.png"
+            width="616"
+            height="831"
+            alt="Hand holding phone with PlantSnapper app identifying a wildflower plant"
+          />
+        </div>
+        <div class="project-content">
+          <div class="project-label">
+            <h3>Plant Snapper</h3>
+            <h4>2025</h4>
+          </div>
+          <p>
+            A hands-free mobile app prototype that uses augmented reality and
+            voice interactions to help hikers, gardeners, and nature enthusiasts
+            identify plants, receive safety tips, and gain plant insights in
+            real time.
+          </p>
+          <ul class="skills-flex">
+            <li class="project-skills">User Research</li>
+            <li class="project-skills">Interaction Design</li>
+            <li class="project-skills">Prototyping</li>
+          </ul>
+          <a href="projectPage1.html" class="button-def">View Project</a>
+        </div>
+      </div>
+      <div class="outer-margin project-container">
+        <div class="image-wrapper">
+          <img
+            src="assets/jazzdorThumbnail.png"
+            width="2921"
+            height="1705"
+            alt="Cyclist passing through Jazzdor Music Festival public installation"
+          />
+        </div>
+        <div class="project-content">
+          <div class="project-label">
+            <h3>Jazzdor Music Festival Graphical Experimentation</h3>
+            <h4>2024</h4>
+          </div>
+          <p>
+            Experimental visual design concepts for Jazzdor Music Festival,
+            aiming to capture the improvisational nature of jazz and their
+            audience.
+          </p>
+          <ul class="skills-flex">
+            <li class="project-skills">Graphic Design</li>
+            <li class="project-skills">Identity</li>
+            <li class="project-skills">Case Studies</li>
+          </ul>
+          <a href="projectPage2.html" class="button-def">View Project</a>
+        </div>
+      </div>
+      <div class="outer-margin project-container">
+        <div class="image-wrapper">
+          <img
+            src="assets/onTrack.png"
+            width="3267"
+            height="1800"
+            alt="Iphone mockup of onTrack mobile focus app"
+          />
+        </div>
+        <div class="project-content">
+          <div class="project-label">
+            <h3>OnTrack Immersive Mobile Focus App</h3>
+            <h4>2025</h4>
+          </div>
+          <p>
+            A mobile focus app centered around meditative and
+            productivity-enhancing features, designed to help students and
+            professionals stay focused and manage distractions.
+          </p>
+          <ul class="skills-flex">
+            <li class="project-skills">Mobile Development</li>
+            <li class="project-skills">React Native</li>
+            <li class="project-skills">Visual Design</li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
-            <section id="footer-navigation">
-                <div class="footer-grid-navigation">
-                    <div>
-                        <h2 class="footer-category">Contact</h2>
-                        <a class="footer-link" href="mailto:michellezed2018@gmail.com">Email</a>
-                    </div>
-                    <div>
-                        <h2 class="footer-category">Socials</h2>
-                        <a class="footer-link" href="https://www.linkedin.com/in/michelle-z-a64144259">LinkedIn</a>
-                        <a class="footer-link" href="https://github.com/michelleuu">GitHub</a>
-                    </div>
-                    <div>
-                        <h2 class="footer-category">Projects</h2>
-                        <a class="footer-link" href="projectPage1.html">PlantSnapper Mobile App</a>
-                        <a class="footer-link" href="projectPage2.html">Jazzdor Music Festival</a>
-                    </div>
-                </div>
-            </section>
-        </footer>
+    <section id="contact" class="section-spacing">
+      <div id="main-contact">
+        <h2>Let's <span class="underline">Connect!</span></h2>
+        <div id="email-container" class="outer-margin">
+          <a
+            id="email-contact"
+            class="contact-link"
+            href="mailto:michellezed2018@gmail.com"
+            >michellezed2018@gmail.com</a
+          >
+        </div>
+      </div>
+      <div id="other-contact-container" class="grid two-column">
+        <div id="other-contact" class="outer-margin">
+          <h3>My Online Presence</h3>
+          <div class="link-with-icon">
+            <img
+              class="contact-icons"
+              src="assets/icons/linkedn-icon.svg"
+              alt="Links to external Linkedn profile"
+              height="30"
+              width="34"
+            />
+            <a
+              class="contact-link"
+              href="https://www.linkedin.com/in/michelle-z-a64144259"
+              >linkedin.com/in/michelle-z-a64144259</a
+            >
+          </div>
+          <div class="link-with-icon">
+            <img
+              class="contact-icons"
+              src="assets/icons/github-icon.svg"
+              alt="Links to external github profile"
+              height="34"
+              width="34"
+            />
+            <a class="contact-link" href="https://github.com/michelleuu"
+              >https://github.com/michelleuu</a
+            >
+          </div>
+        </div>
+        <div>
+          <img
+            id="self-portrait"
+            src="assets/abstract-portrait.png"
+            alt="Abstract misty scene with overlapping blue filter."
+            height="1130"
+            width="1496"
+          />
+        </div>
+      </div>
+    </section>
 
-    </body>
+    <footer class="footer-container outer-margin">
+      <div>
+        <h2 id="footer-note">Coded in HTML, CSS, and Javascript.</h2>
+        <p>© 2025 Michelle Zhu</p>
+      </div>
+
+      <section id="footer-navigation">
+        <div class="footer-grid-navigation">
+          <div>
+            <h2 class="footer-category">Contact</h2>
+            <a class="footer-link" href="mailto:michellezed2018@gmail.com"
+              >Email</a
+            >
+          </div>
+          <div>
+            <h2 class="footer-category">Socials</h2>
+            <a
+              class="footer-link"
+              href="https://www.linkedin.com/in/michelle-z-a64144259"
+              >LinkedIn</a
+            >
+            <a class="footer-link" href="https://github.com/michelleuu"
+              >GitHub</a
+            >
+          </div>
+          <div>
+            <h2 class="footer-category">Projects</h2>
+            <a class="footer-link" href="projectPage1.html"
+              >PlantSnapper Mobile App</a
+            >
+            <a class="footer-link" href="projectPage2.html"
+              >Jazzdor Music Festival</a
+            >
+          </div>
+        </div>
+      </section>
+    </footer>
+  </body>
 </html>
