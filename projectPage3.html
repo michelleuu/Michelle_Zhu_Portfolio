@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Michelle's Portfolio</title>
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/project.css" rel="stylesheet" />
+    <link href="css/grids.css" rel="stylesheet" />
+    <script src="js/splitSlider.js"></script>
+    <script src="js/menu.js"></script>
+  </head>
+
+  <body>
+    <nav>
+      <div class="nav-bar-flex nav-links">
+        <a href="index.html" class="home-icon nav-role button-nav"
+          >Michelle Zhu</a
+        >
+        <div id="navigation-links" class="nav-link-flex">
+          <a href="index.html#about" class="button-nav">About</a>
+          <a href="assets/Resume.pdf" target="_blank" class="button-nav"
+            >Resume</a
+          >
+          <a href="index.html#contact" class="button-nav">Contact</a>
+        </div>
+        <div id="hamburger" class="nav-link-flex">
+          <a
+            href="javascript:void(0);"
+            onclick="openMenu()"
+            id="menu-toggle"
+            aria-expanded="false"
+            aria-controls="dropdown-menu"
+            ><img
+              id="menu-icon"
+              src="assets/hamburger-icon.svg"
+              alt="menu"
+              width="800"
+              height="800"
+          /></a>
+          <a href="javascript:void(0);" onclick="closeMenu()"
+            ><img
+              id="close-icon"
+              class="hide"
+              src="assets/close-icon.svg"
+              alt="close"
+              width="800"
+              height="800"
+          /></a>
+        </div>
+      </div>
+    </nav>
+    <div id="dropdown-menu" class="menu-dropdown-content" aria-hidden="true">
+      <a
+        href="index.html#about"
+        onclick="closeMenu()"
+        class="dropdown-link"
+        tabindex="-1"
+        >About</a
+      >
+      <a
+        href="assets/Resume.pdf"
+        target="_blank"
+        onclick="closeMenu()"
+        class="dropdown-link"
+        tabindex="-1"
+        >Resume</a
+      >
+      <a
+        href="index.html#contact"
+        onclick="closeMenu()"
+        class="dropdown-link"
+        tabindex="-1"
+        >Contact</a
+      >
+    </div>
+    <header>
+      <section id="project-header" class="outer-margin section-spacing">
+        <div class="grid six-column">
+          <h1 class="project-title">Apple Wallet Memories</h1>
+
+          <div class="project-info">
+            <h2>Roles</h2>
+            <ul>
+              <li>Product Designer</li>
+              <li>UX/UI Designer</li>
+              <li>Interaction Designer</li>
+            </ul>
+          </div>
+          <div class="project-info">
+            <h2>Duration</h2>
+            <ul>
+              <li>2026 - 5 days</li>
+            </ul>
+          </div>
+          <div class="project-info">
+            <h2>Team</h2>
+            <ul>
+              <li>Michelle Zhu</li>
+              <li>Clare Hoh</li>
+              <li>Hasrat Buttar</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <section id="project-description" class="outer-margin">
+      <div class="grid overview-container">
+        <h2 class="description-title">Project Overview</h2>
+        <p class="description-content">
+          Apple Wallet Memories explores how a traditionally functional
+          financial tool can support emotional connection and memory
+          preservation. While Apple Wallet efficiently manages payments,
+          transfers, and passes, the stories behind meaningful experiences are
+          rarely captured within the platform. Through user research and
+          iterative design, this project reimagines Apple Wallet as a space for
+          preserving and revisiting the moments behind everyday transactions.
+        </p>
+
+        <div class="description-divider section-divider-line"></div>
+        <h2 class="description-title">Project Brief</h2>
+        <p class="description-content">
+          Add a new creation-centric feature to a typically
+          non-creation-oriented experience.
+        </p>
+        <img
+          class="description-visual"
+          src="assets/appleCashPoster.png"
+          width="1188"
+          height="1836"
+          alt="minimalistic apple wallet memories mockup poster"
+        />
+      </div>
+    </section>
+    <div class="project-analysis-wrapper">
+      <section id="table-of-content">
+        <div>
+          <a href="#project-description" class="footer-link"
+            >Project Overview</a
+          >
+          <a href="#research-findings" class="footer-link"
+            >Findings & Personas</a
+          >
+          <a href="#ideation" class="footer-link">Ideation & Mockups</a>
+          <a href="#user-testing" class="footer-link">User Testing</a>
+          <a href="#design-opportunity" class="footer-link"
+            >Design Opportunity</a
+          >
+          <a href="#conclusion" class="footer-link">Project Reflection</a>
+        </div>
+      </section>
+
+      <section id="project-analysis" class="analysis-outer-margin">
+        <div id="research-findings">
+          <div class="grid-analysis">
+            <div class="analysis-subsection">
+              <h2 class="analysis-subheading">Understanding Apple Wallet</h2>
+              <p class="subheading-content">
+                Apple Wallet is designed around efficiency and simplicity, using
+                a stack of digital cards to help users quickly access payments,
+                passes, tickets, and financial services. However, the financial
+                interactions are purely transactional, offering little
+                opportunity for self-expression or personalization.
+              </p>
+              <img
+                class="subheading-content"
+                src="assets/appleWallet.png"
+                alt="apple wallet app ui"
+                width="1642"
+                height="526"
+              />
+            </div>
+            <div class="analysis-content">
+              <h3>Discovering Apple Cash</h3>
+              <p>
+                During the exploration of Apple Wallet, I discovered Apple Cash
+                which allows users to send and request money directly through
+                Messages.
+              </p>
+
+              <p>
+                Although Apple Cash makes transactions fast and convenient,
+                exchanges often rely on content outside of the transaction
+                itself. Users frequently send photos, screenshots, details, and
+                messages alongside payment requests to provide context or add a
+                personal touch. Over time, these moments become buried within
+                everyday conversations, making them difficult to revisit. This
+                revealed an opportunity to bring payments and their associated
+                memories together in a single experience while maintaining the
+                simplicity users expect from Apple Cash.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <section id="conclusion">
+      <div class="grid-analysis analysis-outer-margin">
+        <div class="analysis-subsection project-reflection">
+          <h2 class="analysis-subheading">Reflection</h2>
+          <p class="subheading-content">
+            One of the project's strengths was its ability to build upon Apple's
+            existing ecosystem. Incorporating familiar elements such as Apple
+            Cash, Messages, Memojis, and contacts helped the concept feel
+            intuitive and consistent with Apple's existing user experience.
+            Future iterations could further refine the features and explore
+            deeper integration with Apple services such as Photos Memories and
+            Apple Intelligence.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer-container outer-margin">
+      <div>
+        <h2 id="footer-note">Coded in HTML, CSS, and Javascript.</h2>
+        <p>© 2025 Michelle Zhu</p>
+      </div>
+
+      <section id="footer-navigation">
+        <div class="footer-grid-navigation">
+          <div>
+            <h2 class="footer-category">Contact</h2>
+            <a class="footer-link" href="mailto:michellezed2018@gmail.com"
+              >Email</a
+            >
+          </div>
+          <div>
+            <h2 class="footer-category">Socials</h2>
+            <a
+              class="footer-link"
+              href="https://www.linkedin.com/in/michelle-z-a64144259"
+              >LinkedIn</a
+            >
+            <a class="footer-link" href="https://github.com/michelleuu"
+              >GitHub</a
+            >
+          </div>
+          <div>
+            <h2 class="footer-category">Projects</h2>
+            <a class="footer-link" href="projectPage1.html"
+              >PlantSnapper Mobile App</a
+            >
+            <a class="footer-link" href="projectPage2.html"
+              >Jazzdor Music Festival</a
+            >
+          </div>
+        </div>
+      </section>
+    </footer>
+  </body>
+</html>
