@@ -160,6 +160,24 @@ Referenced from: https://webdesign.tutsplus.com/how-to-create-a-split-screen-sli
     height: auto;
 }
 
+/* ---- Final features grid ---- */
+.feature-grid {
+    row-gap: 3rem;
+}
+
+.feature-card-visual {
+    background-color: #F2F1F4;
+    border-radius: .5rem;
+    padding: 3rem 2.5rem 0rem 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.feature-card-visual img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
 /* ---- Table of content ---- */
 #table-of-content{
     font-size: 1rem;
