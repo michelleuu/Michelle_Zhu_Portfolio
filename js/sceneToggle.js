@@ -3,10 +3,10 @@
 // app's determineTimeOfDay()), then lets them switch scenes with the buttons.
 (function () {
   const scenes = {
-    morning: { label: 'Morning', alt: 'OnTrack focus screen in the morning: soft pink and lavender sky with a pale sun behind the viaduct' },
-    afternoon: { label: 'Afternoon', alt: 'OnTrack focus screen in the afternoon: warm yellow sky with a full sun above the viaduct' },
-    evening: { label: 'Evening', alt: 'OnTrack focus screen in the evening: coral sunset glowing through the viaduct arches' },
-    night: { label: 'Night', alt: 'OnTrack focus screen at night: a train crosses a viaduct under a navy sky and full moon' },
+    morning: { label: 'Morning', alt: 'OnTrack focus screen in the morning: soft pink and lavender sky with a pale sun behind the bridge' },
+    afternoon: { label: 'Afternoon', alt: 'OnTrack focus screen in the afternoon: warm yellow sky with a full sun above the bridge' },
+    evening: { label: 'Evening', alt: 'OnTrack focus screen in the evening: coral sunset glowing through the bridge arches' },
+    night: { label: 'Night', alt: 'OnTrack focus screen at night: a train crosses a bridge under a navy sky and full moon' },
   };
 
   function determineTimeOfDay() {

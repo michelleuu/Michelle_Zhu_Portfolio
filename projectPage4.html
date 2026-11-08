@@ -202,59 +202,108 @@
           <div class="analysis-subsection">
             <h2 class="analysis-subheading">Ideation &amp; Exploration</h2>
             <p class="subheading-content">
-              Much of my planning focused on how the ride itself should
+              Much of our early planning focused on how the ride itself should
               <em>feel</em>, before designing any individual screen.
             </p>
           </div>
 
           <div class="analysis-content">
-            <h3>Designing the experience before the screens</h3>
-            <p>I sketched and weighed several directions for the focus screen:</p>
+            <h3>Early sketches</h3>
+            <p>
+              Our first sketches took the metaphor literally: each session was a
+              real train route. Users picked a line and destination to set their
+              focus time, watched the train move along a top-down map with
+              distance, time remaining, and arrival, and received a train ticket
+              at the end. The sketches also explored a bedtime reminder, a
+              ticket history, and sound settings.
+            </p>
+
+            <figure class="wide-figure">
+              <img src="assets/onTrack/sketches-focus-flow.png" width="2000" height="1007" loading="lazy"
+                alt="Four hand-drawn sketches: a focus setup screen with a time picker and route choices, a top-down map focus screen showing distance, minutes, and arrival time, a bedtime reminder pop-up, and a train ticket summary with a barcode" />
+              <figcaption>[Early sketches of the focus flow: setup, map-based focus screen, bedtime reminder, and ticket]</figcaption>
+            </figure>
+
+            <figure class="wide-figure">
+              <img src="assets/onTrack/sketches-app-flow.png" width="2000" height="1007" loading="lazy"
+                alt="Four hand-drawn sketches: a login screen with a train on a bridge, a main screen with a 'Hop on' button, a tickets history list, and music settings with sound options like train sound and ocean waves" />
+              <figcaption>[Early sketches of the surrounding app: login, main screen, ticket history, and sound settings]</figcaption>
+            </figure>
+          </div>
+
+          <div class="analysis-content">
+            <h3>Choosing a direction for the focus screen</h3>
+            <p>From there, we weighed several directions for how the ride should look:</p>
             <ul class="bullet-list">
               <li class="bullet-list">
-                <strong>Side view of the train crossing a viaduct.</strong> The
+                <strong>Top-down map view</strong> of the train moving along a
+                route, as in the early sketches. It reads clearly as progress,
+                but more like a navigation app than a calm space.
+              </li>
+              <li class="bullet-list">
+                <strong>Side view of the train crossing a bridge.</strong> The
                 train is small and the landscape is the focus. <em>(Chosen)</em>
               </li>
               <li class="bullet-list">
-                <strong>Top-down view</strong> of the train moving along a
-                track, which reads more like a map or progress tracker.
-              </li>
-              <li class="bullet-list">
                 <strong>View from inside the train</strong> looking out the
-                window. This is the most immersive option, which I saved for a
+                window. This is the most immersive option, which we saved for a
                 future version.
               </li>
               <li class="bullet-list">
-                <strong>Progress bar vs. no progress bar.</strong> A progress
-                bar shows how much time is left, but it also invites
-                clock-watching.
+                <strong>Progress readout vs. no progress readout.</strong>
+                Distance and arrival time show how much is left, but they also
+                invite clock-watching.
               </li>
               <li class="bullet-list">
-                <strong>Timer placement.</strong> I tried the timer in the sky
-                above the scene and as a large clock in the info card before
-                settling on a contained card at the bottom, so the illustration
-                stays uninterrupted.
+                <strong>Timer placement.</strong> The timer moved from the sky
+                above the scene into a contained card at the bottom, so the
+                illustration stays uninterrupted.
               </li>
             </ul>
           </div>
 
           <div class="analysis-content">
-            <h3>Low-fidelity flow</h3>
+            <h3>Experimenting with Greyscale and Implementing the Weather API</h3>
             <p>
-              I mapped the core journey early:
-              <strong>Home → input focus time → Focus → Warning → Focus Summary → Focus History</strong>.
-              The first prototype was greyscale on purpose, so I could test the
-              flow and the accelerometer warning before committing to visuals.
+              Before building the full-colour scenes, I illustrated a greyscale
+              version of the bridge scene as a placeholder. This let me test
+              that everything worked, from the timer and screen flow to the
+              weather data, before fully implementing the final visuals.
+            </p>
+            <p>
+              To check the time-of-day logic, I gave the sun a different test
+              colour for each time of day (yellow, blue, black). At the same stage, I connected the
+              OpenWeather API and displayed the live temperature on screen to
+              confirm the weather data was coming through.
             </p>
 
-            <h3>First pass at “time of day”</h3>
+            <figure class="iteration-figure">
+              <div class="iteration-grid">
+                <div class="phone-frame">
+                  <img src="assets/onTrack/greyscale-scene.png" width="783" height="1655" loading="lazy"
+                    alt="Greyscale illustration of the bridge scene with a white sun rising behind the train" />
+                </div>
+                <img class="iteration-shots" src="assets/onTrack/sun-colour-iteration.png" width="1014" height="754" loading="lazy"
+                  alt="Three early app screens on the greyscale scene with a yellow, blue, and black sun, each showing the live temperature for a nearby weather station in the matching colour" />
+              </div>
+              <figcaption>[Left: greyscale placeholder scene. Right: testing the time-of-day logic with colour-coded suns and live weather data]</figcaption>
+            </figure>
+          </div>
+
+          <div class="analysis-content">
+            <h3>Low-fidelity flow</h3>
             <p>
-              My first version of the dynamic environment was simple: a single
-              sun that changed colour by time of day (yellow, blue, black). It
-              proved the logic worked, but it didn't <em>feel</em> like morning
-              or night. That gap pushed me toward fully illustrated scenes for
-              each time of day.
+              During early implementation, the core journey was
+              <strong>Home → input focus time → Focus → Warning → Focus Summary → Focus History</strong>.
+              Building it on the greyscale scene let us test the flow and the
+              accelerometer warning before committing to visuals.
             </p>
+
+            <figure class="wide-figure full-figure">
+              <img src="assets/onTrack/lofi-user-flow.png" width="1928" height="590" loading="lazy"
+                alt="Low-fidelity user flow: home screen, a focus time input dialog, the greyscale focus timer, a 'Get back to focusing' warning, a focus session summary, and a ride history list" />
+              <figcaption>[Early build user flow, from entering a focus time to reviewing ride history]</figcaption>
+            </figure>
           </div>
         </div>
       </div>
@@ -291,7 +340,7 @@
                     src="assets/onTrack/scene-night.svg"
                     width="783"
                     height="1655"
-                    alt="OnTrack focus screen at night: a train crosses a viaduct under a navy sky and full moon"
+                    alt="OnTrack focus screen at night: a train crosses a bridge under a navy sky and full moon"
                   />
                 </div>
 
@@ -339,7 +388,7 @@
                 <div>
                   <div class="phone-frame">
                     <img src="assets/onTrack/weather-rain.png" width="318" height="690" loading="lazy"
-                      alt="Night focus screen with animated rain streaks falling over the viaduct" />
+                      alt="Night focus screen with animated rain streaks falling over the bridge" />
                   </div>
                   <p class="weather-label">Rain</p>
                 </div>
@@ -442,9 +491,9 @@
 
             <h3>Four times of day</h3>
             <p>
-              I illustrated the same viaduct scene in four palettes, each mapped
+              I illustrated the same bridge scene in four palettes, each mapped
               to the user's local time. Every scene uses the same layer structure
-              (sky, sun or moon, viaduct, mountains, ground, train, and info
+              (sky, sun or moon, bridge, mountains, ground, train, and info
               card), so only the colours and the celestial body change. This made
               the system easy to extend and easy to animate.
             </p>
@@ -490,7 +539,7 @@
               <figure>
                 <div class="phone-frame">
                   <img src="assets/onTrack/sign-in.png" width="783" height="1655" loading="lazy"
-                    alt="Sign-in screen reading 'Welcome to your new journey to stay OnTrack!' over a giant cream moon, with a train and its headlight crossing a viaduct below" />
+                    alt="Sign-in screen reading 'Welcome to your new journey to stay OnTrack!' over a giant cream moon, with a train and its headlight crossing a bridge below" />
                 </div>
                 <figcaption>[Sign in: a giant moon and a train with its headlight on set the night-ride tone from the first screen]</figcaption>
               </figure>

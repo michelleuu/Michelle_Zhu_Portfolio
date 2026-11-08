@@ -265,3 +265,37 @@ Referenced from: https://webdesign.tutsplus.com/how-to-create-a-split-screen-sli
         font-size: 10vw;
     }
 }
+
+/* ---- Large screens ---- */
+/* The layout was designed on a 16" MacBook (~1728px / 108rem wide). On wider
+   screens, keep that same layout and centre it: the extra width becomes equal
+   space on both sides. Backgrounds still stretch edge to edge because the
+   space is added as padding/margin, not by shrinking the sections.
+   --page-gutter is half of the extra width (0 at 108rem and below). */
+:root{
+    --page-max: 108rem;
+    --page-gutter: max(0px, (100% - var(--page-max)) / 2);
+}
+
+@media (min-width: 108rem) {
+    nav .nav-links{
+        padding-left: calc(1rem + var(--page-gutter));
+        padding-right: calc(1rem + var(--page-gutter));
+    }
+
+    #project-header,
+    #project-description,
+    .footer-container{
+        padding-left: calc(3rem + var(--page-gutter));
+        padding-right: calc(3rem + var(--page-gutter));
+    }
+
+    .analysis-outer-margin{
+        margin-left: calc(var(--toc-clearance) + var(--page-gutter));
+        margin-right: calc(12rem + var(--page-gutter));
+    }
+
+    #table-of-content{
+        margin-left: calc(var(--toc-left) + var(--page-gutter));
+    }
+}

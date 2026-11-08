@@ -337,3 +337,51 @@ li code {
         grid-template-columns: 1fr 1fr;
     }
 }
+
+/* ---- Ideation figures ---- */
+.wide-figure {
+    max-width: 50rem;
+    margin-top: 2rem;
+}
+
+.wide-figure img {
+    border: 0.08rem solid #E2E0E6;
+    border-radius: 0.5rem;
+}
+
+.wide-figure figcaption {
+    margin: 1rem auto 2rem;
+}
+
+.iteration-figure {
+    max-width: 50rem;
+    margin-top: 2rem;
+}
+
+.iteration-grid {
+    display: grid;
+    grid-template-columns: 1fr 3.5fr;
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (max-width: 38rem) {
+    .iteration-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+    .iteration-grid .phone-frame {
+        width: 10rem;
+    }
+}
+
+/* Bullet lists match the width of .subheading-content */
+#project-analysis ul.bullet-list,
+#conclusion ul.bullet-list {
+    max-width: 45.6rem;
+}
+
+/* Lo-fi user flow spans the full analysis-content column */
+.wide-figure.full-figure {
+    max-width: none;
+}
