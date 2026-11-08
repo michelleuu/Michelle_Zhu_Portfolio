@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Michelle's Portfolio</title>
-    <link href="assets/favicon.svg" rel="icon" type="image/svg+xml" />
+    <link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml" />
 
     <!-- Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
 
@@ -18,6 +18,7 @@
     <link href="css/project.css" rel="stylesheet" />
     <link href="css/gridsCopy.css" rel="stylesheet" />
     <script src="js/menu.js"></script>
+    <script src="js/toc.js"></script>
   </head>
 
   <body>
@@ -42,7 +43,7 @@
             aria-controls="dropdown-menu"
             ><img
               id="menu-icon"
-              src="assets/hamburger-icon.svg"
+              src="assets/icons/hamburger-icon.svg"
               alt="menu"
               width="800"
               height="800"
@@ -51,7 +52,7 @@
             ><img
               id="close-icon"
               class="hide"
-              src="assets/close-icon.svg"
+              src="assets/icons/close-icon.svg"
               alt="close"
               width="800"
               height="800"
@@ -114,6 +115,19 @@
       </section>
     </header>
 
+    <div class="toc-sticky">
+      <section id="table-of-content">
+        <div>
+          <a href="#project-description" class="footer-link">Project Overview</a>
+          <a href="#background-research" class="footer-link">Discovering Apple Cash</a>
+          <a href="#initial-concepts" class="footer-link">Early Concepts</a>
+          <a href="#refining-concepts" class="footer-link">Narrowing the Focus</a>
+          <a href="#final-features" class="footer-link">Final Features</a>
+          <a href="#conclusion" class="footer-link">Reflection</a>
+        </div>
+      </section>
+    </div>
+
     <section id="project-description" class="outer-margin">
       <div class="overview-container">
         <div class="overview-content">
@@ -155,7 +169,7 @@
 
         <img
           class="description-visual"
-          src="assets/appleCashPoster.png"
+          src="assets/appleWallet/apple-cash-poster.png"
           width="1188"
           height="1836"
           alt="minimalistic apple wallet memories mockup poster"
@@ -177,7 +191,7 @@
   
             <img
               class="subheading-content"
-              src="assets/AppleCashUserFlow.png"
+              src="assets/appleWallet/user-flow.png"
               alt="Apple Cash screenshots"
               width="2733"
               height="909"
@@ -215,7 +229,7 @@
             </p>
             <figure>
               <img
-                src="assets/AppleWalletWireframe.png"
+                src="assets/appleWallet/wireframe.png"
                 alt="Apple Wallet Group Settlements Wireframe"
                 width="4087"
                 height="2029"
@@ -253,7 +267,7 @@
 
             <figure>
               <img
-                src="assets/AppleCashUserFlow2.png"
+                src="assets/appleWallet/user-flow-2.png"
                 alt=""
                 width=""
                 height=""
@@ -278,7 +292,7 @@
               <article class="feature-card">
                 <div class="feature-card-visual">
                   <img
-                    src="assets/Feature1.png"
+                    src="assets/appleWallet/feature-1.png"
                     alt="Placeholder mockup screens for feature 1"
                     width="1667"
                     height="1363"
@@ -291,7 +305,7 @@
               <article class="feature-card">
                 <div class="feature-card-visual">
                   <img
-                    src="assets/Feature2.png"
+                    src="assets/appleWallet/feature-2.png"
                     alt="Placeholder mockup screens for feature 2"
                     width="1667"
                     height="1363"
@@ -304,7 +318,7 @@
               <article class="feature-card">
                 <div class="feature-card-visual">
                   <img
-                    src="assets/Feature3.png"
+                    src="assets/appleWallet/feature-3.png"
                     alt="Placeholder mockup screens for feature 3"
                     width="1667"
                     height="1363"
@@ -317,7 +331,7 @@
               <article class="feature-card">
                 <div class="feature-card-visual">
                   <img
-                    src="assets/Feature4.png"
+                    src="assets/appleWallet/feature-4.png"
                     alt="Placeholder mockup screens for feature 4"
                     width="1667"
                     height="1363"
@@ -376,8 +390,14 @@
           </div>
           <div>
             <h2 class="footer-category">Projects</h2>
+            <a class="footer-link" href="projectPage3Ver2.html"
+              >Apple Wallet Memories</a
+            >
             <a class="footer-link" href="projectPage1.html"
               >PlantSnapper Mobile App</a
+            >
+            <a class="footer-link" href="projectPage4.html"
+              >OnTrack Focus App</a
             >
             <a class="footer-link" href="projectPage2.html"
               >Jazzdor Music Festival</a

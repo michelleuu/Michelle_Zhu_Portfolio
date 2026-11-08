@@ -1,0 +1,781 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Michelle's Portfolio</title>
+    <link href="assets/icons/favicon.svg" rel="icon" type="image/svg+xml" />
+
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Figtree:ital,wght@0,300..900;1,300..900&family=IBM+Plex+Sans:ital,wght@0,100..700;1,100..700&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link href="css/main.css" rel="stylesheet" />
+    <link href="css/project.css" rel="stylesheet" />
+    <link href="css/gridsCopy.css" rel="stylesheet" />
+    <link href="css/onTrack.css" rel="stylesheet" />
+    <script src="js/menu.js"></script>
+    <script src="js/toc.js"></script>
+    <script src="js/partials.js"></script>
+    <script src="js/sceneToggle.js" defer></script>
+  </head>
+
+  <body>
+    <div id="project-nav"></div>
+    <header>
+      <section id="project-header" class="outer-margin section-spacing">
+        <div class="grid six-column">
+          <h1 class="project-title">A Context-Aware Immersive Focus App</h1>
+
+          <div class="project-info">
+            <h2>Roles</h2>
+            <ul>
+              <li>Product Designer</li>
+              <li>Full-Stack Developer</li>
+            </ul>
+          </div>
+          <div class="project-info">
+            <h2>Duration</h2>
+            <ul>
+              <li>5 weeks</li>
+            </ul>
+          </div>
+          <div class="project-info">
+            <h2>Team</h2>
+            <ul>
+              <li>Michelle Zhu</li>
+              <li>Clare Hoh</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </header>
+
+    <div class="toc-sticky">
+      <section id="table-of-content">
+        <div>
+          <a href="#project-description" class="footer-link">Project Overview</a>
+          <a href="#design-challenge" class="footer-link">Design Challenge</a>
+          <a href="#concept" class="footer-link">Concept &amp; Metaphor</a>
+          <a href="#ideation" class="footer-link">Ideation</a>
+          <a href="#immersive-experience" class="footer-link">Immersive Experience</a>
+          <a href="#visual-design" class="footer-link">Visual Design</a>
+          <a href="#building-scene" class="footer-link">Building the Scene</a>
+          <a href="#mobile-development" class="footer-link">Mobile Development</a>
+          <a href="#challenges" class="footer-link">Challenges</a>
+          <a href="#conclusion" class="footer-link">Reflection</a>
+        </div>
+      </section>
+    </div>
+
+    <section id="project-description" class="outer-margin">
+      <div class="overview-container">
+        <div class="overview-content">
+          <div class="description-row">
+            <h2 class="description-title">Project Overview</h2>
+            <p class="description-content">
+              A mobile focus app centered around meditative and
+              productivity-enhancing features, designed to help students and
+              professionals stay focused and manage distractions.
+            </p>
+          </div>
+
+          <div class="description-divider section-divider-line"></div>
+
+          <div class="description-row">
+            <h2 class="description-title">My Contributions</h2>
+            <ul class="bullet-list">
+              <li class="bullet-list">Created the visual assets in Figma and brought them into VS Code for development</li>
+              <li class="bullet-list">Implemented the animated scenery and built the weather integration that makes each ride reflect the world outside</li>
+              <li class="bullet-list">Developed the database that stores each user’s ride history</li>
+            </ul>
+          </div>
+        </div>
+
+        <img
+          class="description-visual"
+          src="assets/onTrack/mockup.png"
+          width="735"
+          height="1105"
+          alt="Iphone mockup of onTrack mobile focus app"
+        />
+      </div>
+    </section>
+
+    <section id="project-analysis" class="analysis-outer-margin">
+      <!-- ---- Design Challenge ---- -->
+      <div id="design-challenge">
+        <div class="grid-analysis">
+          <div class="analysis-subsection">
+            <h2 class="analysis-subheading">Design Challenge</h2>
+            <p class="subheading-content">
+              Most focus timers are a number counting down on a blank screen.
+              They work, but they feel like a chore, and they don't give you any
+              reason to keep the app open instead of switching to something
+              else.
+            </p>
+          </div>
+
+          <div class="analysis-content">
+            <blockquote class="hmw-quote">
+              How might we make focusing feel like a calm, immersive experience
+              instead of a countdown, while still keeping people accountable?
+            </blockquote>
+
+            <h3>Design goals</h3>
+            <div class="grid three-column goal-grid">
+              <div>
+                <h4>Immersive, not distracting</h4>
+                <p class="secondary-text">
+                  The screen should be pleasant to glance at, but never so busy
+                  it pulls attention from the task.
+                </p>
+              </div>
+              <div>
+                <h4>Grounded in the real world</h4>
+                <p class="secondary-text">
+                  The scene should reflect your environment (your time of day,
+                  your weather) so it feels personal and present.
+                </p>
+              </div>
+              <div>
+                <h4>Gentle accountability</h4>
+                <p class="secondary-text">
+                  Nudge users when they drift, without punishing them.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- Concept & Metaphor ---- -->
+      <div id="concept">
+        <div class="grid-analysis">
+          <div class="analysis-subsection">
+            <h2 class="analysis-subheading">Concept &amp; Metaphor</h2>
+            <p class="subheading-content">
+              I chose a train ride as the core metaphor. A train has a clear
+              start and destination, it moves forward steadily, and looking out
+              the window is a naturally calming, low-effort activity. That
+              matches what a focus session should feel like.
+            </p>
+          </div>
+
+          <div class="analysis-content">
+            <p>
+              Once I had the metaphor, I carried it through the whole app so
+              every feature had a matching meaning:
+            </p>
+            <table id="metaphor-table">
+              <caption>How each focus concept maps to the train metaphor</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Focus concept</th>
+                  <th scope="col">OnTrack equivalent</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>Starting a focus session</td><td>Starting a ride</td></tr>
+                <tr><td>User account / profile</td><td>OnTrack Pass (train card)</td></tr>
+                <tr><td>Session summary</td><td>Ride ticket</td></tr>
+                <tr><td>Session log</td><td>Ride History</td></tr>
+                <tr><td>Getting distracted</td><td>Going off track → “Get back on track”</td></tr>
+              </tbody>
+            </table>
+            <p>
+              Keeping the metaphor consistent gave the app a voice and made the
+              UI copy almost write itself, from the “Start Ride” button to the
+              barcode on the summary ticket.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- Ideation & Exploration ---- -->
+      <div id="ideation">
+        <div class="grid-analysis">
+          <div class="analysis-subsection">
+            <h2 class="analysis-subheading">Ideation &amp; Exploration</h2>
+            <p class="subheading-content">
+              Much of my planning focused on how the ride itself should
+              <em>feel</em>, before designing any individual screen.
+            </p>
+          </div>
+
+          <div class="analysis-content">
+            <h3>Designing the experience before the screens</h3>
+            <p>I sketched and weighed several directions for the focus screen:</p>
+            <ul class="bullet-list">
+              <li class="bullet-list">
+                <strong>Side view of the train crossing a viaduct.</strong> The
+                train is small and the landscape is the focus. <em>(Chosen)</em>
+              </li>
+              <li class="bullet-list">
+                <strong>Top-down view</strong> of the train moving along a
+                track, which reads more like a map or progress tracker.
+              </li>
+              <li class="bullet-list">
+                <strong>View from inside the train</strong> looking out the
+                window. This is the most immersive option, which I saved for a
+                future version.
+              </li>
+              <li class="bullet-list">
+                <strong>Progress bar vs. no progress bar.</strong> A progress
+                bar shows how much time is left, but it also invites
+                clock-watching.
+              </li>
+              <li class="bullet-list">
+                <strong>Timer placement.</strong> I tried the timer in the sky
+                above the scene and as a large clock in the info card before
+                settling on a contained card at the bottom, so the illustration
+                stays uninterrupted.
+              </li>
+            </ul>
+          </div>
+
+          <div class="analysis-content">
+            <h3>Low-fidelity flow</h3>
+            <p>
+              I mapped the core journey early:
+              <strong>Home → input focus time → Focus → Warning → Focus Summary → Focus History</strong>.
+              The first prototype was greyscale on purpose, so I could test the
+              flow and the accelerometer warning before committing to visuals.
+            </p>
+
+            <h3>First pass at “time of day”</h3>
+            <p>
+              My first version of the dynamic environment was simple: a single
+              sun that changed colour by time of day (yellow, blue, black). It
+              proved the logic worked, but it didn't <em>feel</em> like morning
+              or night. That gap pushed me toward fully illustrated scenes for
+              each time of day.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- The Immersive Experience (feature section) ---- -->
+      <div id="immersive-experience">
+        <div class="grid-analysis">
+          <div class="analysis-subsection">
+            <h2 class="analysis-subheading">The Immersive Experience</h2>
+            <p class="subheading-content">
+              Instead of one static background, every ride is built from
+              <strong>three layers that respond to the user's real environment
+              and preferences</strong>. Together they turn a timer into a place
+              you sit in for an hour.
+            </p>
+          </div>
+
+          <!-- Layer 1: time of day, with interactive scene switcher -->
+          <div class="analysis-content">
+            <h3>Layer 1: Time of day (what you see)</h3>
+            <p>
+              The scene follows your local clock. Morning is soft pink, day is
+              warm yellow, evening is coral sunset, and night is navy under the
+              moon. If you study at 11pm, the train crosses a night sky; at 8am,
+              it rides into the sunrise. The app always feels like it's in the
+              same moment you are.
+            </p>
+
+            <figure class="scene-demo">
+              <div class="scene-demo-layout">
+                <div class="phone-frame scene-demo-phone">
+                  <img
+                    id="scene-demo-image"
+                    src="assets/onTrack/scene-night.svg"
+                    width="783"
+                    height="1655"
+                    alt="OnTrack focus screen at night: a train crosses a viaduct under a navy sky and full moon"
+                  />
+                </div>
+
+                <div class="scene-demo-controls">
+                  <p class="scene-demo-label" id="scene-demo-label">Try it: pick a time of day</p>
+                  <div class="scene-toggle" role="group" aria-labelledby="scene-demo-label">
+                    <button type="button" class="scene-button" data-scene="morning" aria-pressed="false">
+                      Morning <span>5am–10am</span>
+                    </button>
+                    <button type="button" class="scene-button" data-scene="afternoon" aria-pressed="false">
+                      Afternoon <span>10am–5pm</span>
+                    </button>
+                    <button type="button" class="scene-button" data-scene="evening" aria-pressed="false">
+                      Evening <span>5pm–8pm</span>
+                    </button>
+                    <button type="button" class="scene-button" data-scene="night" aria-pressed="true">
+                      Night <span>8pm–5am</span>
+                    </button>
+                  </div>
+                  <p class="secondary-text" id="scene-demo-status" aria-live="polite">
+                    Showing the Night scene.
+                  </p>
+                </div>
+              </div>
+              <figcaption>
+                [The same scene in four palettes. The page opens on the scene for
+                your current local time, using the same logic as the app.]
+              </figcaption>
+            </figure>
+          </div>
+
+          <!-- Layer 2: weather -->
+          <div class="analysis-content">
+            <h3>Layer 2: Weather (what's happening outside)</h3>
+            <p>
+              Using your location and live weather data, the scene adds animated
+              rain, drifting clouds, falling snow, or lightning. If it's raining
+              outside your window, it's raining in OnTrack too. This small detail
+              grounds the experience in the real world and makes each ride feel
+              different.
+            </p>
+
+            <figure>
+              <div class="weather-grid">
+                <div>
+                  <div class="phone-frame">
+                    <img src="assets/onTrack/weather-rain.png" width="318" height="690" loading="lazy"
+                      alt="Night focus screen with animated rain streaks falling over the viaduct" />
+                  </div>
+                  <p class="weather-label">Rain</p>
+                </div>
+                <div>
+                  <div class="phone-frame">
+                    <img src="assets/onTrack/weather-clouds.png" width="318" height="690" loading="lazy"
+                      alt="Night focus screen with soft clouds drifting across the moon" />
+                  </div>
+                  <p class="weather-label">Clouds</p>
+                </div>
+                <div>
+                  <div class="phone-frame">
+                    <img src="assets/onTrack/weather-snow.png" width="318" height="690" loading="lazy"
+                      alt="Night focus screen with snowflakes falling over the scene" />
+                  </div>
+                  <p class="weather-label">Snow</p>
+                </div>
+                <div>
+                  <div class="phone-frame">
+                    <img src="assets/onTrack/weather-lightning.png" width="318" height="690" loading="lazy"
+                      alt="Night focus screen with a white lightning bolt striking across the scene" />
+                  </div>
+                  <p class="weather-label">Lightning</p>
+                </div>
+              </div>
+              <figcaption>[Lottie weather overlays looping on top of the Night scene]</figcaption>
+            </figure>
+          </div>
+
+          <!-- Layer 3: sound -->
+          <div class="analysis-content">
+            <h3>Layer 3: Sound (what you hear)</h3>
+            <p>
+              Users can choose calm background noise,
+              or switch to their own Spotify music. I designed the sound options
+              to be ambient and non-lyrical by default, so they mask distractions
+              without competing for attention.
+            </p>
+            <ul class="sound-chips" aria-label="Sound options">
+              <li>Train</li>
+              <li>Rain</li>
+              <li>Nature</li>
+              <li>Waves</li>
+              <li>Spotify</li>
+            </ul>
+            <p>
+              Sound settings live in two places: in General Settings (next to the
+              OnTrack Pass), and inside the focus screen via the speaker icon, so
+              users can adjust mid-ride without leaving.
+            </p>
+          </div>
+
+          <div class="analysis-content">
+            <h3>Why these three layers?</h3>
+            <div class="grid three-column goal-grid">
+              <div>
+                <h4>Time of day</h4>
+                <p class="secondary-text">Makes the experience feel <em>present</em>.</p>
+              </div>
+              <div>
+                <h4>Weather</h4>
+                <p class="secondary-text">Makes it feel <em>personal</em> and real.</p>
+              </div>
+              <div>
+                <h4>Sound</h4>
+                <p class="secondary-text">Makes it <em>calming</em> and blocks out the room around you.</p>
+              </div>
+            </div>
+            <p>
+              Because the layers are independent, they combine: a snowy evening
+              with waves is a completely different ride from a sunny afternoon
+              with the train. That gives dozens of combinations from a small set
+              of assets.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- Visual Design ---- -->
+      <div id="visual-design">
+        <div class="grid-analysis">
+          <div class="analysis-subsection">
+            <h2 class="analysis-subheading">Visual Design</h2>
+            <p class="subheading-content">
+              I wanted OnTrack to feel like a quiet night-train postcard: flat
+              illustration, soft geometry, and a limited palette. The core
+              palette is deep navy and indigo, warm cream, and a single orange
+              accent for actions, so the interactive elements always stand out
+              against the scenery.
+            </p>
+          </div>
+
+          <div class="analysis-content">
+            <ul class="palette" aria-label="Core colour palette">
+              <li><span class="swatch" style="background:#36509B"></span>Navy <code>#36509B</code></li>
+              <li><span class="swatch" style="background:#251251"></span>Indigo <code>#251251</code></li>
+              <li><span class="swatch" style="background:#FFF9E2"></span>Cream <code>#FFF9E2</code></li>
+              <li><span class="swatch" style="background:#F79F40"></span>Orange accent <code>#F79F40</code></li>
+            </ul>
+
+            <h3>Four times of day</h3>
+            <p>
+              I illustrated the same viaduct scene in four palettes, each mapped
+              to the user's local time. Every scene uses the same layer structure
+              (sky, sun or moon, viaduct, mountains, ground, train, and info
+              card), so only the colours and the celestial body change. This made
+              the system easy to extend and easy to animate.
+            </p>
+
+            <figure>
+              <div class="scene-strip">
+                <div>
+                  <div class="phone-frame">
+                    <img src="assets/onTrack/scene-morning.svg" width="783" height="1655" loading="lazy"
+                      alt="Morning scene in soft pinks and lavender with a pale sun behind the arches" />
+                  </div>
+                  <p class="weather-label">Morning<span>5am–10am</span></p>
+                </div>
+                <div>
+                  <div class="phone-frame">
+                    <img src="assets/onTrack/scene-afternoon.svg" width="783" height="1655" loading="lazy"
+                      alt="Afternoon scene in warm yellow and olive with a full sun" />
+                  </div>
+                  <p class="weather-label">Afternoon<span>10am–5pm</span></p>
+                </div>
+                <div>
+                  <div class="phone-frame">
+                    <img src="assets/onTrack/scene-evening.svg" width="783" height="1655" loading="lazy"
+                      alt="Evening scene in coral and rust with a sunset glowing through the arches" />
+                  </div>
+                  <p class="weather-label">Evening<span>5pm–8pm</span></p>
+                </div>
+                <div>
+                  <div class="phone-frame">
+                    <img src="assets/onTrack/scene-night.svg" width="783" height="1655" loading="lazy"
+                      alt="Night scene in navy and indigo with a full moon and stars" />
+                  </div>
+                  <p class="weather-label">Night<span>8pm–5am</span></p>
+                </div>
+              </div>
+              <figcaption>[One layer structure, four palettes]</figcaption>
+            </figure>
+          </div>
+
+          <div class="analysis-content">
+            <h3>Brand moments</h3>
+            <div class="grid two-column brand-grid">
+              <figure>
+                <div class="phone-frame">
+                  <img src="assets/onTrack/sign-in.png" width="783" height="1655" loading="lazy"
+                    alt="Sign-in screen reading 'Welcome to your new journey to stay OnTrack!' over a giant cream moon, with a train and its headlight crossing a viaduct below" />
+                </div>
+                <figcaption>[Sign in: a giant moon and a train with its headlight on set the night-ride tone from the first screen]</figcaption>
+              </figure>
+              <figure>
+                <div class="phone-frame">
+                  <img src="assets/onTrack/sign-up.png" width="783" height="1655" loading="lazy"
+                    alt="Create account screen reading 'Create your account and begin your journey' above a moonrise over mountains" />
+                </div>
+                <figcaption>[Sign up: the moon rises over the mountains as the journey begins]</figcaption>
+              </figure>
+            </div>
+            <ul class="bullet-list">
+              <li class="bullet-list">
+                <strong>OnTrack Pass:</strong> the account card is designed as a
+                train pass, with the user's name and a sleeping cat mascot.
+              </li>
+              <li class="bullet-list">
+                <strong>Ride ticket:</strong> the session summary is a ticket
+                complete with barcode, travel time, and completion status.
+              </li>
+              <li class="bullet-list">
+                <strong>The cat:</strong> a small sleeping cat lounges on the
+                timer card as a quiet signal to relax.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- Building the Scene ---- -->
+      <div id="building-scene">
+        <div class="grid-analysis">
+          <div class="analysis-subsection">
+            <h2 class="analysis-subheading">Building the Scene (Figma → Code)</h2>
+            <p class="subheading-content">
+              I wanted the illustrations to be <strong>live</strong>, not flat
+              images, so they could change with the time of day and layer
+              weather on top.
+            </p>
+          </div>
+
+          <div class="analysis-content">
+            <ol class="pipeline">
+              <li>
+                <h4>Design in Figma</h4>
+                <p class="secondary-text">Every scene built as components with consistent, named layers.</p>
+              </li>
+              <li>
+                <h4>Convert to SVG</h4>
+                <p class="secondary-text">A Figma-to-code plugin turned components into React Native SVG, which I cleaned up so each layer could be styled and swapped by props.</p>
+              </li>
+              <li>
+                <h4>Drive with logic</h4>
+                <p class="secondary-text"><code>determineTimeOfDay()</code> reads the device's hour and picks the matching palette.</p>
+              </li>
+              <li>
+                <h4>Layer weather</h4>
+                <p class="secondary-text">Lottie JSON animations loop over the scene for the whole ride.</p>
+              </li>
+            </ol>
+
+<pre class="code-block"><code><span class="c-key">const</span> <span class="c-fn">determineTimeOfDay</span> = () =&gt; {
+  <span class="c-key">const</span> hour = <span class="c-key">new</span> <span class="c-fn">Date</span>().<span class="c-fn">getHours</span>();
+  <span class="c-key">if</span> (hour &gt;= <span class="c-num">5</span> &amp;&amp; hour &lt; <span class="c-num">10</span>) <span class="c-key">return</span> <span class="c-str">"morning"</span>;
+  <span class="c-key">if</span> (hour &gt;= <span class="c-num">10</span> &amp;&amp; hour &lt; <span class="c-num">17</span>) <span class="c-key">return</span> <span class="c-str">"day"</span>;
+  <span class="c-key">if</span> (hour &gt;= <span class="c-num">17</span> &amp;&amp; hour &lt; <span class="c-num">20</span>) <span class="c-key">return</span> <span class="c-str">"evening"</span>;
+  <span class="c-key">return</span> <span class="c-str">"night"</span>;
+};</code></pre>
+
+            <p>
+              Because the scene is code and not a static image, adding a fifth
+              time of day or a new weather state only takes a new palette or one
+              more Lottie file. No screens need to be redrawn.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- Mobile Development ---- -->
+      <div id="mobile-development">
+        <div class="grid-analysis">
+          <div class="analysis-subsection">
+            <h2 class="analysis-subheading">Mobile Development</h2>
+            <p class="subheading-content">
+              OnTrack was built in <strong>React Native with Expo</strong>, using
+              several native device features to make the experience aware of its
+              surroundings.
+            </p>
+            <ul class="tool-tags" aria-label="Tools used">
+              <li>Figma</li>
+              <li>React Native</li>
+              <li>Expo</li>
+              <li>react-native-svg</li>
+              <li>Lottie</li>
+              <li>OpenWeather API</li>
+              <li>Firebase</li>
+              <li>SQLite</li>
+            </ul>
+          </div>
+
+          <div class="analysis-content">
+            <h3>Real-time weather (implemented by me)</h3>
+            <ul class="bullet-list">
+              <li class="bullet-list">
+                <strong>GPS (expo-location):</strong> requests location
+                permission, then gets the user's latitude and longitude.
+              </li>
+              <li class="bullet-list">
+                <strong>OpenWeather API:</strong> fetches the city, condition,
+                icon, and temperature for those coordinates.
+              </li>
+              <li class="bullet-list">
+                <strong>Condition → animation mapping:</strong> Rain, Drizzle,
+                Snow, Clouds, and Thunderstorm each map to a Lottie animation that
+                loops during the ride. If a condition isn't mapped, the scene
+                stays clear, so the screen never shows a broken state.
+              </li>
+            </ul>
+
+<pre class="code-block"><code><span class="c-key">const</span> <span class="c-fn">fetchWeather</span> = <span class="c-key">async</span> () =&gt; {
+  <span class="c-fn">setLoading</span>(<span class="c-num">true</span>);
+  <span class="c-key">const</span> location = <span class="c-key">await</span> <span class="c-fn">getLocation</span>();
+  <span class="c-key">if</span> (!location) {
+    <span class="c-fn">setError</span>(<span class="c-str">"Unable to get location"</span>);
+    <span class="c-fn">setLoading</span>(<span class="c-num">false</span>);
+    <span class="c-key">return</span>;
+  }
+  <span class="c-key">const</span> { latitude, longitude } = location || { latitude: <span class="c-num">43.7</span>, longitude: <span class="c-num">-79.4</span> };
+  <span class="c-key">try</span> {
+    <span class="c-key">const</span> response = <span class="c-key">await</span> <span class="c-fn">fetch</span>(
+      <span class="c-str">`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&amp;lon=${longitude}&amp;appid=${weatherKey}`</span>
+    );
+    <span class="c-key">const</span> data = <span class="c-key">await</span> response.<span class="c-fn">json</span>();
+
+    <span class="c-com">// If weather exists, get weather data</span>
+    <span class="c-key">if</span> (data.weather) {
+      <span class="c-fn">setWeather</span>(data.weather);     <span class="c-com">// condition (e.g. rain, cloudy)</span>
+      <span class="c-fn">setWeatherCity</span>(data.name);    <span class="c-com">// city</span>
+      <span class="c-fn">setTempC</span>(Math.<span class="c-fn">round</span>(data.main.temp - <span class="c-num">273.15</span>)); <span class="c-com">// Kelvin → Celsius</span>
+    } <span class="c-key">else</span> {
+      <span class="c-fn">setError</span>(<span class="c-str">"No weather station nearby. Try again later."</span>);
+    }
+  } <span class="c-key">catch</span> (e) {
+    <span class="c-fn">setError</span>(e.message || <span class="c-str">"Failed to fetch weather"</span>);
+  } <span class="c-key">finally</span> {
+    <span class="c-fn">setLoading</span>(<span class="c-num">false</span>);
+  }
+};</code></pre>
+
+<pre class="code-block"><code><span class="c-com">// Map each OpenWeather condition to a Lottie overlay</span>
+<span class="c-key">const</span> weatherAnimations = {
+  Drizzle: RainAnimation, Rain: RainAnimation, Snow: SnowAnimation,
+  Clouds: CloudsAnimation, Thunderstorm: LightningAnimation,
+};
+
+{weather &amp;&amp; weather[<span class="c-num">0</span>]?.main &amp;&amp; weatherAnimations[weather[<span class="c-num">0</span>].main] &amp;&amp; (
+  &lt;<span class="c-fn">LottieView</span>
+    source={weatherAnimations[weather[<span class="c-num">0</span>].main]}
+    autoPlay
+    loop
+    resizeMode={weather[<span class="c-num">0</span>].main === <span class="c-str">"Clouds"</span> ? <span class="c-str">"contain"</span> : <span class="c-str">"cover"</span>}
+    pointerEvents=<span class="c-str">"none"</span>
+    style={weather[<span class="c-num">0</span>].main === <span class="c-str">"Clouds"</span>
+      ? styles.cloudConditionContainer
+      : styles.weatherConditionContainer}
+  /&gt;
+)}</code></pre>
+            <p class="secondary-text code-note">
+              Clouds use <code>contain</code> so they sit in the sky; rain, snow,
+              and lightning use <code>cover</code> to fill the whole screen.
+              <code>pointerEvents="none"</code> keeps the overlay from blocking
+              the timer and buttons underneath.
+            </p>
+          </div>
+
+          <div class="analysis-content">
+            <h3>Gentle accountability (Accelerometer)</h3>
+            <p>
+              Using <strong>expo-sensors</strong>, the app calculates total
+              movement across x, y, and z. If movement stays above a threshold
+              for <strong>more than 5 seconds</strong>, the user gets a “Get back
+              on track” alert. If movement drops below the threshold for
+              <strong>1 second</strong>, the timer resets. This means a quick
+              adjustment of the phone doesn't trigger a warning, but picking it
+              up to scroll does.
+            </p>
+
+            <h3>Haptics</h3>
+            <p>
+              Key actions like navigating and starting or ending a ride trigger
+              medium haptic feedback, so the interface feels physical and
+              responsive.
+            </p>
+
+            <h3>Storage</h3>
+            <ul class="bullet-list">
+              <li class="bullet-list">
+                <strong>Firebase Authentication:</strong> email and password
+                sign-up and login.
+              </li>
+              <li class="bullet-list">
+                <strong>AsyncStorage:</strong> sound preferences (on/off,
+                selected background noise, Spotify connected), username, and user
+                ID, so settings persist across sessions and appear on the OnTrack
+                Pass.
+              </li>
+              <li class="bullet-list">
+                <strong>SQLite:</strong> every ride is saved locally with task
+                name, duration, completion status, and date, so history works
+                offline. Rides without a task name are auto-named “Ride #N.” Home
+                greets returning users with their last ride (“Your last ride was 1
+                min long, ready to start another one?”), and Ride History supports
+                <strong>All / Completed / Incomplete</strong> filters,
+                swipe-to-delete, and a filter-aware Clear.
+              </li>
+            </ul>
+
+            <h3>Spotify (implemented by Clare)</h3>
+            <p>
+              Users can connect Spotify and control playback (play, pause, skip)
+              from the focus screen, with the current album art shown live.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ---- Challenges ---- -->
+      <div id="challenges">
+        <div class="grid-analysis">
+          <div class="analysis-subsection">
+            <h2 class="analysis-subheading">Challenges</h2>
+          </div>
+
+          <div class="analysis-content">
+            <h3>Making illustrations dynamic</h3>
+            <p>
+              Static exports couldn't change with time or weather. Converting
+              Figma components to SVG code solved it, but the plugin output
+              needed cleanup before each layer could be styled and swapped by
+              props.
+            </p>
+
+            <h3>Tuning the accelerometer</h3>
+            <p>
+              An early version warned users too often. I added a time window (5
+              seconds of sustained movement) and a reset window (1 second of
+              stillness) so the nudge feels fair instead of nagging.
+            </p>
+
+            <h3>Working inside Expo Go</h3>
+            <p>
+              Native SDKs weren't available, so Spotify authentication had to run
+              through Expo AuthSession, and redirect URIs changed with every
+              Wi-Fi network until the team switched to a stable localhost URI. A
+              standalone build would remove most of these constraints.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="conclusion">
+      <div class="grid-analysis analysis-outer-margin">
+        <div class="analysis-subsection project-reflection">
+          <h2 class="analysis-subheading">Reflection</h2>
+          <p class="subheading-content">
+            This project showed me that <strong>immersion is a design decision,
+            not decoration.</strong> Every visual choice had to support focus. The
+            scene needed to be calm enough to sit in your peripheral vision, and
+            responsive enough to feel alive. Owning both the illustrations and the
+            code that drives them meant I could design for what was technically
+            possible from day one.
+          </p>
+          <h3 class="next-steps-title">If I continued OnTrack, I would:</h3>
+          <ul class="bullet-list subheading-content">
+            <li class="bullet-list">Build the <strong>inside-the-train view</strong>, which was the most immersive concept I explored</li>
+            <li class="bullet-list">Add <strong>user testing</strong> to tune session length, alert sensitivity, and whether a progress indicator helps or hurts focus</li>
+            <li class="bullet-list"><strong>Animate the train and scenery continuously</strong> (parallax mountains, passing poles) to strengthen the sense of motion</li>
+            <li class="bullet-list">Move to a <strong>standalone build</strong> for smoother native integrations</li>
+            <li class="bullet-list">Add more weather states (fog, clear night sky) and seasonal palettes</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <div id="site-footer"></div>
+  </body>
+</html>

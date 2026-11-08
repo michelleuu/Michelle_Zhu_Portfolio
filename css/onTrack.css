@@ -1,0 +1,339 @@
+/* Styling specific to the OnTrack project page (projectPage4.html) */
+
+/* ---- Shared phone frame used for every screen on the page ---- */
+.phone-frame {
+    aspect-ratio: 783 / 1655;
+    border: 0.4rem solid #1b1b1f;
+    border-radius: 1.6rem;
+    overflow: hidden;
+    background-color: #1b1b1f;
+    box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.15);
+}
+
+.phone-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+#project-analysis h4 {
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* ---- Design challenge ---- */
+.hmw-quote {
+    margin: 0 0 3rem 0;
+    padding: 1.5rem 2rem;
+    max-width: 45.6rem;
+    border-left: 0.3rem solid #8BAAFF;
+    background-color: #F2F1F4;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.6;
+}
+
+.goal-grid {
+    margin: 1rem 0 2rem;
+    max-width: 50rem;
+}
+
+/* ---- Metaphor table ---- */
+#metaphor-table {
+    width: 100%;
+    max-width: 45.6rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+#metaphor-table caption {
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+#metaphor-table td:first-child,
+#metaphor-table th:first-child {
+    padding-right: 1.5rem;
+    color: #555;
+}
+
+#metaphor-table td:last-child {
+    font-weight: 600;
+}
+
+/* ---- Interactive time-of-day demo ---- */
+.scene-demo {
+    margin-top: 3rem;
+}
+
+.scene-demo-layout {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.scene-demo-phone {
+    width: 16rem;
+    flex: none;
+}
+
+.scene-demo-phone img {
+    transition: opacity 0.25s ease;
+}
+
+.scene-demo-phone img.is-swapping {
+    opacity: 0;
+}
+
+.scene-demo-controls {
+    flex: 1 1 14rem;
+    max-width: 20rem;
+}
+
+.scene-demo-label {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.scene-toggle {
+    display: grid;
+    gap: 0.6rem;
+}
+
+.scene-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0.8rem 1rem;
+    border: 0.08rem solid #1b1b1f;
+    border-radius: 2rem;
+    background: transparent;
+    color: #1b1b1f;
+    font-family: "Montserrat", sans-serif;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.scene-button span {
+    font-family: "inter", serif;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+.scene-button:hover {
+    background-color: #F2F1F4;
+}
+
+.scene-button[aria-pressed="true"] {
+    background-color: #36509B;
+    border-color: #36509B;
+    color: white;
+}
+
+.scene-button:focus-visible {
+    outline: 0.15rem solid #F79F40;
+    outline-offset: 0.15rem;
+}
+
+/* ---- Weather + time-of-day strips ---- */
+.weather-grid,
+.scene-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    max-width: 50rem;
+    margin-top: 2rem;
+}
+
+.weather-label {
+    text-align: center;
+    font-weight: 600;
+    margin-top: 0.8rem;
+    margin-bottom: 0;
+}
+
+.weather-label span {
+    display: block;
+    font-weight: normal;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+
+/* ---- Sound chips + tool tags ---- */
+.sound-chips,
+.tool-tags,
+.palette {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+    margin: 1rem 0 1.5rem;
+}
+
+.sound-chips li,
+.tool-tags li {
+    padding: 0.4rem 1rem;
+    border-radius: 2rem;
+    font-size: 0.9rem;
+}
+
+.sound-chips li {
+    background-color: #36509B;
+    color: white;
+}
+
+.tool-tags li {
+    border: 0.08rem solid #1b1b1f;
+    font-size: 0.8rem;
+}
+
+/* ---- Palette ---- */
+.palette {
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.palette li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 0.9rem;
+}
+
+.swatch {
+    width: 2.2rem;
+    height: 2.2rem;
+    border-radius: 50%;
+    border: 0.08rem solid rgba(0, 0, 0, 0.15);
+}
+
+/* ---- Brand moments ---- */
+.brand-grid {
+    max-width: 34rem;
+    margin-top: 2rem;
+}
+
+.brand-grid figcaption {
+    margin: 1rem auto;
+}
+
+/* ---- Figma → code pipeline ---- */
+.pipeline {
+    counter-reset: step;
+    list-style: none;
+    margin: 1rem 0 2rem;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    max-width: 50rem;
+}
+
+.pipeline li {
+    counter-increment: step;
+    position: relative;
+    padding: 1.2rem;
+    background-color: #F2F1F4;
+    border-radius: 0.5rem;
+}
+
+.pipeline li::before {
+    content: counter(step);
+    display: inline-grid;
+    place-items: center;
+    width: 1.8rem;
+    height: 1.8rem;
+    margin-bottom: 0.6rem;
+    border-radius: 50%;
+    background-color: #36509B;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 0.85rem;
+}
+
+/* Arrow between steps */
+.pipeline li:not(:last-child)::after {
+    content: "→";
+    position: absolute;
+    right: -0.85rem;
+    top: 1.5rem;
+    font-size: 1rem;
+    color: #36509B;
+}
+
+/* ---- Code blocks ---- */
+.code-block {
+    max-width: 45.6rem;
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    overflow-x: auto;
+    background-color: #1F1D2E;
+    color: #E8E6F0;
+    border-radius: 0.5rem;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.8rem;
+    line-height: 1.6;
+}
+
+.c-key { color: #C792EA; }
+.c-fn  { color: #82AAFF; }
+.c-str { color: #F7C27B; }
+.c-num { color: #F78C6C; }
+.c-com { color: #8A8FA8; font-style: italic; }
+
+p code,
+li code {
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 0.85em;
+    background-color: #F2F1F4;
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.2rem;
+}
+
+.code-note {
+    margin-top: -0.5rem;
+}
+
+/* ---- Reflection ---- */
+.next-steps-title {
+    margin-top: 1rem;
+    margin-bottom: 0.8rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 60rem) {
+    .pipeline {
+        grid-template-columns: 1fr 1fr;
+    }
+    .pipeline li:nth-child(2)::after {
+        display: none;
+    }
+}
+
+@media (max-width: 38rem) {
+    .weather-grid,
+    .scene-strip {
+        grid-template-columns: 1fr 1fr;
+    }
+    .pipeline {
+        grid-template-columns: 1fr;
+    }
+    .pipeline li::after {
+        display: none;
+    }
+    .scene-demo-layout {
+        justify-content: center;
+    }
+    .scene-demo-phone {
+        width: 13rem;
+    }
+    .scene-demo-controls {
+        max-width: none;
+    }
+    .brand-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}

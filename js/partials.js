@@ -5,7 +5,7 @@
   const FOOTER_HTML = `<footer class="footer-container outer-margin">
       <div>
         <h2 id="footer-note">Coded in HTML, CSS, and Javascript.</h2>
-        <p>© 2025 Michelle Zhu</p>
+        <p>© 2026 Michelle Zhu</p>
       </div>
 
       <section id="footer-navigation">
@@ -21,7 +21,9 @@
           </div>
           <div>
             <h2 class="footer-category">Projects</h2>
+            <a class="footer-link" href="projectPage3Ver2.html">Apple Wallet Memories</a>
             <a class="footer-link" href="projectPage1.html">PlantSnapper Mobile App</a>
+            <a class="footer-link" href="projectPage4.html">OnTrack Focus App</a>
             <a class="footer-link" href="projectPage2.html">Jazzdor Music Festival</a>
           </div>
         </div>
@@ -37,8 +39,8 @@
           <a href="index.html#contact" class="button-nav">Contact</a>
         </div>
         <div id="hamburger" class="nav-link-flex">
-          <a href="javascript:void(0);" onclick="openMenu()" id="menu-toggle" aria-expanded="false" aria-controls="dropdown-menu"><img id="menu-icon" src="assets/hamburger-icon.svg" alt="menu" width="800" height="800"></a>
-          <a href="javascript:void(0);" onclick="closeMenu()"><img id="close-icon" class="hide" src="assets/close-icon.svg" alt="close" width="800" height="800"></a>
+          <a href="javascript:void(0);" onclick="openMenu()" id="menu-toggle" aria-expanded="false" aria-controls="dropdown-menu"><img id="menu-icon" src="assets/icons/hamburger-icon.svg" alt="menu" width="800" height="800"></a>
+          <a href="javascript:void(0);" onclick="closeMenu()"><img id="close-icon" class="hide" src="assets/icons/close-icon.svg" alt="close" width="800" height="800"></a>
         </div>
       </div>
     </nav>

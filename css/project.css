@@ -4,6 +4,15 @@
     box-sizing: border-box;
 }
 
+/* Table of content sizing. Everything to its right (overview text, analysis
+   sections) is offset from these, so change them here only. */
+:root{
+    --toc-left: 1.4rem;   /* gap between window edge and the TOC */
+    --toc-width: 12rem;
+    --toc-gap: 3rem;      /* gap between the TOC and the content beside it */
+    --toc-clearance: calc(var(--toc-left) + var(--toc-width) + var(--toc-gap));
+}
+
 /* ---- Font styling ---- */
 .project-title{
     font-size: 3.5rem;
@@ -67,7 +76,7 @@
 }
 
 .analysis-outer-margin{
-    margin-left: 12rem;
+    margin-left: var(--toc-clearance); /* clear the table of content */
     margin-right: 12rem;
 }   
 
@@ -179,21 +188,74 @@ Referenced from: https://webdesign.tutsplus.com/how-to-create-a-split-screen-sli
 }
 
 /* ---- Table of content ---- */
+/* Shared by every project page. Markup goes right after </header>:
+   <div class="toc-sticky"><section id="table-of-content">...</section></div>
+   Starts vertically centred beside the overview text, then sticks just
+   under the nav while scrolling. js/toc.js sets --toc-offset (the distance
+   from the wrapper to the centred position); the wrapper's top is
+   reduced by the same amount so the stuck position stays at 5rem.
+   Zero-height wrapper so it doesn't push the page content down. */
+.toc-sticky{
+    position: sticky;
+    top: calc(5rem - var(--toc-offset, 0px));
+    height: 0;
+    z-index: 10;
+}
+
 #table-of-content{
     font-size: 1rem;
-    position: fixed;
-    top:70%;
-    max-width: 10rem;
-    text-align: center;
-    margin-left: 1.4rem;
+    width: var(--toc-width);
+    text-align: left;
+    margin-left: var(--toc-left);
+    position: relative;
+    top: var(--toc-offset, 0px);
     background-color: rgba(254,247,238,0.9);
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+/* Dot marks the section you're currently on (set by js/toc.js).
+   Space is reserved on every link so text doesn't shift when it moves. */
+#table-of-content .footer-link{
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.75rem 1rem;
+    line-height: 1.3;
+}
+
+#table-of-content .footer-link:last-child{
+    border-bottom: none;
+}
+
+#table-of-content .footer-link::before{
+    content: "";
+    flex: none;
+    width: 0.4rem;
+    height: 0.4rem;
+    border-radius: 50%;
+    background-color: currentColor; /* follows the hover colour */
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+#table-of-content .footer-link.active::before{
+    opacity: 1;
+}
+
+/* Push overview text past the table of content. --toc-gap matches the 3rem
+   gap between the text and image (.overview-container column-gap).
+   The section's .outer-margin already provides 3rem, so subtract it. */
+#project-description .overview-content{
+    padding-left: calc(var(--toc-clearance) - 3rem);
 }
 
 /* Mobile layout (condense content: remove table and update margins) */
 @media (max-width: 48rem) {
     #table-of-content {
         display: none;
+    }
+    #project-description .overview-content{
+        padding-left: 0;
     }
     .analysis-outer-margin{
         margin-left: 1.5rem;
